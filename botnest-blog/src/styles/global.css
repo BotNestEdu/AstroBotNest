@@ -26,8 +26,7 @@ body {
 	padding: 0;
 	text-align: left;
 	background: url('/img/beehive.png') repeat center center, linear-gradient(var(--gray-gradient)) no-repeat;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
+	background-size: auto 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));

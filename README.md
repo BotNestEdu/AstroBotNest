@@ -1,4 +1,4 @@
-# BotNestBlog 🚀
+# Blog BotNest 🚀
 
 **Blog oficial de BotNest** creado con [Astro](https://astro.build) y el tema [AstroPaper](https://github.com/satnaing/astro-paper). Publicamos contenido educativo sobre robótica, programación, IA, diseño 3D y herramientas tecnológicas para el aula.
 
