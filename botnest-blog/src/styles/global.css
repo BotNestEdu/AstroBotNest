@@ -25,8 +25,7 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	/*background: linear-gradient(var(--gray-gradient)) no-repeat;*/
-	background: transparent;
+	background: linear-gradient(var(--gray-gradient)) no-repeat;
 	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
@@ -172,16 +171,4 @@ hr {
 }
 .cta-button:hover {
 	background-color: var(--accent-dark);
-}
-
-
-body::before {
-	content: '';
-	position: fixed;
-	inset: 0;
-	z-index: -1;
-	background: url('/img/beehive.png') repeat;
-	background-size: contain; /* o cover, según prefieras */
-	opacity: 0.05; /* Ajusta al gusto */
-	pointer-events: none;
 }
