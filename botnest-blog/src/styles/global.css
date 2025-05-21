@@ -8,8 +8,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 :root {
-	--accent: #2191A5;           /* Azul BotNest */
-	--accent-dark: #1a6d7e;
+	--accent: 33, 145, 165;
+	--accent-dark: 26, 109, 126;
 	--black: 39, 67, 70;          /* Texto fuerte */
 	--gray: 91, 91, 91;
 	--gray-light: 232, 236, 241;
@@ -74,7 +74,7 @@ a {
 	color: var(--accent);
 }
 a:hover {
-	color: var(--accent);
+	color: var(--accent-dark);
 }
 p {
 	margin-bottom: 1em;
