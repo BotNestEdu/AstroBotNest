@@ -6,48 +6,54 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1 class="text-4xl font-bold mb-4">Bienvenido a BotNestBlog</h1>
-			<p class="mt-2 text-lg mb-6">
-				Tecnología educativa, robótica, IA y creatividad para el aula y más allá.
-			</p>
+<html lang="es">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <section class="text-center py-12 px-4 bg-gray-100 rounded shadow mb-10">
+        <img src="/logo-botnest.png" alt="Logo BotNest" class="mx-auto h-24 mb-6" />
+        <h1 class="text-4xl font-bold mb-4">Bienvenido a <span class="text-[color:var(--accent)]">BotNest</span></h1>
+        <p class="text-lg text-gray-700 max-w-xl mx-auto">
+          Un espacio donde tecnología, creatividad y educación se encuentran. Robótica, IA, impresión 3D, programación y mucho más para aprender creando.
+        </p>
+      </section>
 
-			<section class="mb-8">
-				<h2 class="text-2xl font-semibold mb-2">¿Qué es BotNestBlog?</h2>
-				<p>
-					Es un espacio creado por y para entusiastas de la educación tecnológica. Aquí compartimos ideas, recursos, talleres y experiencias reales con herramientas como Arduino, mBot, impresión 3D, Minecraft, Scratch y mucho más.
-				</p>
-			</section>
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-2">¿Qué es BotNest?</h2>
+        <p>
+          Es un blog personal sobre tecnología educativa. Aquí comparto ideas, recursos, experiencias reales y actividades con herramientas como Arduino, mBot, Minecraft, Scratch, impresión 3D y más.
+        </p>
+      </section>
 
-			<section class="mb-8">
-				<h2 class="text-2xl font-semibold mb-2">¿Qué encontrarás aquí?</h2>
-				<ul class="list-disc list-inside pl-2">
-					<li>Guías paso a paso para proyectos educativos</li>
-					<li>Noticias sobre robótica y educación</li>
-					<li>Actividades didácticas con IA y diseño 3D</li>
-					<li>Recomendaciones de software libre y plataformas</li>
-				</ul>
-			</section>
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-2">¿Qué encontrarás aquí?</h2>
+        <ul class="list-disc list-inside pl-4">
+          <li>Guías paso a paso para proyectos educativos</li>
+          <li>Noticias y reflexiones sobre robótica e IA</li>
+          <li>Actividades con software libre y herramientas creativas</li>
+          <li>Inspiración para el aula, el hogar o makerspaces</li>
+        </ul>
+      </section>
 
-			<section class="mb-8">
-				<h2 class="text-2xl font-semibold mb-2">¿Para quién está pensado?</h2>
-				<p>
-					Para docentes, familias, makers, estudiantes y curiosos que quieran aprender, crear o inspirarse con la tecnología desde un enfoque STEAM.
-				</p>
-			</section>
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-2">¿Para quién está pensado?</h2>
+        <p>
+          Para docentes, familias, makers, estudiantes y curiosos que quieran aprender, enseñar o simplemente disfrutar de la tecnología desde un enfoque STEAM.
+        </p>
+      </section>
 
-			<section class="bg-gray-100 p-4 rounded mt-6">
-				<p class="text-center text-lg font-medium">
-					Explora el blog, suscríbete a nuestras novedades o comparte tus ideas. ¡Este espacio también es tuyo!
-				</p>
-			</section>
-		</main>
-		<Footer />
-	</body>
+      <section class="bg-gray-100 p-6 rounded mt-6 text-center shadow">
+        <p class="text-lg font-medium mb-2">
+          Explora el contenido, guarda tus favoritos y comparte lo que más te inspire.
+        </p>
+        <a href="/blog" class="inline-block mt-2 px-6 py-2 bg-[color:var(--accent)] text-white font-semibold rounded hover:bg-[color:var(--accent-dark)] transition">
+          Ver artículos del blog
+        </a>
+      </section>
+    </main>
+    <Footer />
+  </body>
 </html>
