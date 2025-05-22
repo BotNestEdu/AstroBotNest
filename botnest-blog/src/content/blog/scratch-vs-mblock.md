@@ -1,7 +1,8 @@
 ---
 title: "Scratch vs. mBlock: ¿cuándo usar uno u otro?"
 description: "Una guía clara y actualizada para docentes y familias sobre cuándo utilizar Scratch o mBlock en el aula de robótica educativa. Comparativa técnica, casos de uso y recomendaciones."
-pubDatetime: 2025-05-22T09:00:00Z
+pubDate: 2025-05-22T09:00:00Z
+updatedDate: 2025-05-22T09:00:00Z
 author: BotNest
 heroImage: "/img/blog/scratch-vs-mblock.png"
 tags: ["robótica educativa", "Scratch", "mBlock", "programación por bloques", "tecnología"]
