@@ -79,22 +79,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					<slot />
 				</div>
 			</article>
+			<div class="floating-share">
+				<span class="share-label">Comparte</span>
+				<a href="https://x.com/share?url={Astro.site + Astro.url.pathname}" target="_blank" aria-label="Compartir en X"><i class="fa-brands fa-x-twitter"></i></a>
+				<a href="https://www.facebook.com/sharer/sharer.php?u={Astro.site + Astro.url.pathname}" target="_blank" aria-label="Compartir en Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+				<a href="https://wa.me/?text={Astro.site + Astro.url.pathname}" target="_blank" aria-label="Compartir por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+				</div>
 		</main>
-		<section class="share-buttons">
-			<p>¿Te ha gustado? ¡Compártelo!</p>
-			<a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${Astro.url}`} target="_blank" rel="noopener" title="Compartir en X (Twitter)">
-				<i class="fab fa-x-twitter"></i>
-			</a>
-			<a href={`https://www.facebook.com/sharer/sharer.php?u=${Astro.url}`} target="_blank" rel="noopener" title="Compartir en Facebook">
-				<i class="fab fa-facebook"></i>
-			</a>
-			<a href={`https://www.linkedin.com/sharing/share-offsite/?url=${Astro.url}`} target="_blank" rel="noopener" title="Compartir en LinkedIn">
-				<i class="fab fa-linkedin"></i>
-			</a>
-			<a href={`https://wa.me/?text=${encodeURIComponent(title + ' ' + Astro.url)}`} target="_blank" rel="noopener" title="Compartir en WhatsApp">
-				<i class="fab fa-whatsapp"></i>
-			</a>
-		</section>
 		<Footer />
 	</body>
 </html>

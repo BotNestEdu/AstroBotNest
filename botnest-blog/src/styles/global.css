@@ -230,20 +230,33 @@ header {
 	color: var(--accent);
 }
 
-.share-buttons {
-	margin-top: 2em;
-	padding-top: 1em;
-	border-top: 1px solid rgb(var(--gray-light));
-	text-align: center;
-	font-size: 1.4em;
+.floating-share {
+	position: fixed;
+	bottom: 1.5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: white;
+	padding: 0.5em 1em;
+	border-radius: 2em;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	display: flex;
+	align-items: center;
+	gap: 1em;
+	z-index: 999;
+	font-size: 1.2em;
 }
 
-.share-buttons a {
-	margin: 0 0.5em;
-	color: var(--accent);
+.floating-share i {
+	color: rgb(var(--gray-dark));
 	transition: color 0.2s ease;
 }
 
-.share-buttons a:hover {
-	color: var(--accent-dark);
+.floating-share i:hover {
+	color: rgb(var(--accent));
+}
+
+.floating-share .share-label {
+	font-size: 0.9em;
+	font-weight: bold;
+	color: rgb(var(--gray-dark));
 }
