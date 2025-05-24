@@ -81,9 +81,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			</article>
 			<div class="floating-share">
 				<span class="share-label">Comparte</span>
-				<a href="https://x.com/share?url={Astro.site + Astro.url.pathname}" target="_blank" aria-label="Compartir en X"><i class="fa-brands fa-x-twitter"></i></a>
-				<a href="https://www.facebook.com/sharer/sharer.php?u={Astro.site + Astro.url.pathname}" target="_blank" aria-label="Compartir en Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-				<a href="https://wa.me/?text={Astro.site + Astro.url.pathname}" target="_blank" aria-label="Compartir por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+				<a href="https://x.com/share?url=${encodeURIComponent(Astro.site + Astro.url.pathname)}" target="_blank" aria-label="Compartir en X"><i class="fa-brands fa-x-twitter"></i></a>
+				<a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(Astro.site + Astro.url.pathname)}" target="_blank" aria-label="Compartir en Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+				<a href="https://wa.me/?text=${encodeURIComponent(Astro.site + Astro.url.pathname)}" target="_blank" aria-label="Compartir por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
 				</div>
 		</main>
 		<Footer />
