@@ -235,17 +235,15 @@ header {
 	padding-top: 1em;
 	border-top: 1px solid rgb(var(--gray-light));
 	text-align: center;
-	font-size: 1.1em;
+	font-size: 1.4em;
 }
 
 .share-buttons a {
 	margin: 0 0.5em;
-	text-decoration: none;
-	font-weight: bold;
 	color: var(--accent);
+	transition: color 0.2s ease;
 }
 
 .share-buttons a:hover {
-	text-decoration: underline;
 	color: var(--accent-dark);
 }
