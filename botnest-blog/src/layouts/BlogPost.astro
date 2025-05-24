@@ -80,6 +80,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				</div>
 			</article>
 		</main>
+		<section class="share-buttons">
+			<p>¿Te ha gustado? ¡Compártelo!</p>
+			<a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${Astro.url}`} target="_blank" rel="noopener" title="Compartir en X (Twitter)">🟦 X</a>
+			<a href={`https://www.facebook.com/sharer/sharer.php?u=${Astro.url}`} target="_blank" rel="noopener" title="Compartir en Facebook">🔵 Facebook</a>
+			<a href={`https://www.linkedin.com/sharing/share-offsite/?url=${Astro.url}`} target="_blank" rel="noopener" title="Compartir en LinkedIn">🔗 LinkedIn</a>
+			<a href={`https://wa.me/?text=${encodeURIComponent(title + ' ' + Astro.url)}`} target="_blank" rel="noopener" title="Compartir en WhatsApp">🟢 WhatsApp</a>
+		</section>
 		<Footer />
 	</body>
 </html>

@@ -229,3 +229,23 @@ header {
 .main-nav a:hover {
 	color: var(--accent);
 }
+
+.share-buttons {
+	margin-top: 2em;
+	padding-top: 1em;
+	border-top: 1px solid rgb(var(--gray-light));
+	text-align: center;
+	font-size: 1.1em;
+}
+
+.share-buttons a {
+	margin: 0 0.5em;
+	text-decoration: none;
+	font-weight: bold;
+	color: var(--accent);
+}
+
+.share-buttons a:hover {
+	text-decoration: underline;
+	color: var(--accent-dark);
+}
