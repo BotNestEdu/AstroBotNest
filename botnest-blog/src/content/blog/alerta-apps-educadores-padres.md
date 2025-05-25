@@ -1,7 +1,7 @@
 ---
 title: 21 aplicaciones que deberías conocer como padre o educador
 description: Descubre qué apps pueden representar riesgos para niños y adolescentes, y cómo acompañarles en su educación digital.
-pubDatetime: 2025-05-25
+pubDate: 2025-05-25
 author: Geek Tale
 cover: '/img/blog/alerta-apps-educadores-padres.png'
 tags: ['educación digital', 'familias', 'ciberseguridad', 'tecnología', 'apps']
