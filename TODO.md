@@ -1,26 +1,29 @@
+---
+type: Checklist
+---
+
 # TODO – Mejoras para BotNest
 
 Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarrollando tu sitio web BotNest con Astro.
 
-## ✅ Ya implementado
-- Despliegue en Netlify con dominio personalizado
-- Logo y favicon integrados
-- Tipografía moderna (Inter)
-- Paleta de colores personalizada
-- Página de inicio con estructura clara
-- Header y footer coherentes con redes sociales reales
-- Página 404 funcional
-- Asistente virtual Zumbit presentada en la sección “Acerca de”
-- Botones de compartir visibles al final de los posts
-
----
+## ✅ Despliegue
+- [x] Despliegue en Netlify con dominio personalizado
+- [x] Logo y favicon integrados
+- [x] Tipografía moderna (Inter)
+- [x] Paleta de colores personalizada
+- [x] Página de inicio con estructura clara
+- [x] Header y footer coherentes con redes sociales reales
+- [x] Página 404 funcional
+- [x] Asistente virtual Zumbit presentada en la sección “Acerca de”
+- [x] Botones de compartir visibles al final de los posts
 
 ## 🧩 Pendiente
 
 ### 1. Estilo de entradas del blog
+- [ ] Entender la cabecera de un post, de donde sale, se puede modificar
 - [ ] Mejorar visualmente el listado de posts (usar tarjetas o previews con imagen y resumen)
-- [ ] Añadir navegación entre entradas (post siguiente/anterior)
-- [ ] Aplicar justificado automático a todo el texto de los posts
+- [ ] Añadir navegación entre entradas (post siguiente/anterior) - Relacionados
+- [x] Aplicar justificado automático a todo el texto de los posts
 - [ ] Añadir paginación si el número de entradas crece
 
 ### 2. SEO y Open Graph
@@ -53,8 +56,6 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 ### 7. Sitemap y RSS
 - [ ] Generar `sitemap.xml` automático
 - [ ] Activar feed RSS (`rss.xml`) para el blog
-
----
 
 ## 🧠 Extras (futuro opcional)
 - [ ] Modo oscuro

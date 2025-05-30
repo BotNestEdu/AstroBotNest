@@ -7,7 +7,7 @@ import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, author } = Astro.props;
 const currentUrl = `${Astro.site}${Astro.url.pathname}`;
 const encodedUrl = encodeURIComponent(currentUrl);
 ---
@@ -15,6 +15,22 @@ const encodedUrl = encodeURIComponent(currentUrl);
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
+		<!-- Open Graph -->
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={heroImage ? `${Astro.site}${heroImage}` : `${Astro.site}/default-og.png`} />
+		<meta property="og:url" content={currentUrl} />
+		<meta property="og:site_name" content="BotNest" />
+		<meta property="article:author" content={author} />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={heroImage ? `${Astro.site}${heroImage}` : `${Astro.site}/default-og.png`} />
+		<meta name="twitter:creator" content="@botnest_edu" />
+		<meta name="twitter:site" content="@botnest_edu" />
 		<style>
 			main {
 				width: calc(100% - 2em);
