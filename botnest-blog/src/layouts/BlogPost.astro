@@ -37,15 +37,15 @@ const encodedUrl = encodeURIComponent(currentUrl);
 			"@context": "https://schema.org",
 			"@type": "BlogPosting",
 			headline: title,
-			description: description,
+			description,
 			image: `${Astro.site}${heroImage || '/default-og.png'}`,
 			url: `${Astro.site}${Astro.url.pathname}`,
-			datePublished: pubDate.toISOString(),
-			dateModified: updatedDate ? updatedDate.toISOString() : pubDate.toISOString(),
-			author: {
+			datePublished: pubDate?.toISOString?.() || pubDate,
+			dateModified: updatedDate?.toISOString?.() || pubDate?.toISOString?.() || pubDate,
+			author: author ? {
 			"@type": "Person",
 			name: author
-			},
+			} : undefined,
 			publisher: {
 			"@type": "Organization",
 			name: "BotNest",
@@ -54,9 +54,8 @@ const encodedUrl = encodeURIComponent(currentUrl);
 				url: `${Astro.site}/logo-botnest.png`
 			}
 			}
-		})}
+		}, null, 2)}
 		</script>
-
 
 		<style>
 			main {
