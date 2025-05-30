@@ -31,6 +31,33 @@ const encodedUrl = encodeURIComponent(currentUrl);
 		<meta name="twitter:image" content={heroImage ? `${Astro.site}${heroImage}` : `${Astro.site}/default-og.png`} />
 		<meta name="twitter:creator" content="@botnest_edu" />
 		<meta name="twitter:site" content="@botnest_edu" />
+
+		<script type="application/ld+json">
+		{JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "BlogPosting",
+			headline: title,
+			description: description,
+			image: `${Astro.site}${heroImage || '/default-og.png'}`,
+			url: `${Astro.site}${Astro.url.pathname}`,
+			datePublished: pubDate.toISOString(),
+			dateModified: updatedDate ? updatedDate.toISOString() : pubDate.toISOString(),
+			author: {
+			"@type": "Person",
+			name: author
+			},
+			publisher: {
+			"@type": "Organization",
+			name: "BotNest",
+			logo: {
+				"@type": "ImageObject",
+				url: `${Astro.site}/logo-botnest.png`
+			}
+			}
+		})}
+		</script>
+
+
 		<style>
 			main {
 				width: calc(100% - 2em);
