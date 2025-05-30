@@ -25,8 +25,8 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 - [ ] Añadir navegación entre entradas (post siguiente/anterior) - Relacionados
 - [x] Aplicar justificado automático a todo el texto de los posts
 - [ ] Añadir paginación si el número de entradas crece
-- [ ] Cambiar texto Last updated on May 25, 2025
-- [ ] Ver si tengo la web en inglés
+- [x] Cambiar texto Last updated on May 25, 2025
+- [x] Ver si tengo la web en inglés
 
 ### 2. SEO y Open Graph
 - [x] Implementar etiquetas `og:title`, `og:description`, `og:image`, `og:url` con valores reales por post
@@ -35,8 +35,9 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 - [x] Garantizar que `description` e `image` sean únicas por entrada
 - [x] Añadir campo visible “autor” en cada post
 - [ ] Añadir imagen por defecto apra las og cards
-- [ ] Revisar que se usa la imagen pro defecto cuando no hay imagen
-- [ ] Ser Google Friendly
+- [ ] Revisar que se usa la imagen por defecto cuando no hay imagen
+- [x] Ser Google Friendly
+- [ ] Por alguna extraña razón no me detecta el autor en el Search Google, lo he añadido por defecto
 
 ### 3. Botones de compartir
 - [ ] Mejorar los botones actuales para que incluyan: `<TÍTULO> <URL> vía @botnest_edu`
@@ -68,3 +69,4 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 - [ ] Buscador interno para entradas
 - [ ] Zona de descargas o recursos extra
 - [ ] Página de “Recursos” o “Herramientas”
+- [ ] netlify plugin?

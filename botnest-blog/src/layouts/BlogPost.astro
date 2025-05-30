@@ -109,7 +109,7 @@ const encodedUrl = encodeURIComponent(currentUrl);
 						<div class="date">
 							<FormattedDate date={pubDate} />
 							{
-								updatedDate && updatedDate !== pubDate &&(
+								updatedDate && new Date(updatedDate).getTime() !== new Date(pubDate).getTime() &&(
 									<div class="last-updated-on">
 										Última actualización: <FormattedDate date={updatedDate} />
 									</div>
