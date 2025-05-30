@@ -32,40 +32,28 @@ const encodedUrl = encodeURIComponent(currentUrl);
 		<meta name="twitter:creator" content="@botnest_edu" />
 		<meta name="twitter:site" content="@botnest_edu" />
 
-		<script type="application/ld+json">
-		{
-			JSON.stringify({
-			"@context": "https://schema.org",
-			"@type": "BlogPosting",
-			headline: title,
-			description,
-			image: `${Astro.site}${heroImage || '/default-og.png'}`,
-			url: `${Astro.site}${Astro.url.pathname}`,
-			datePublished:
-				pubDate instanceof Date ? pubDate.toISOString() : String(pubDate),
-			dateModified:
-				updatedDate instanceof Date
-				? updatedDate.toISOString()
-				: pubDate instanceof Date
-				? pubDate.toISOString()
-				: String(pubDate),
-			author: author
-				? {
-					"@type": "Person",
-					name: author
-				}
-				: undefined,
-			publisher: {
-				"@type": "Organization",
-				name: "BotNest",
-				logo: {
-				"@type": "ImageObject",
-				url: `${Astro.site}/logo-botnest.png`
-				}
+		<script type="application/ld+json" set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		"headline": title,
+		"description": description,
+		"image": `${Astro.site}${heroImage || '/default-og.png'}`,
+		"url": `${Astro.site}${Astro.url.pathname}`,
+		"datePublished": pubDate instanceof Date ? pubDate.toISOString() : pubDate,
+		"dateModified": updatedDate instanceof Date ? updatedDate.toISOString() : pubDate,
+		"author": {
+			"@type": "Person",
+			"name": author
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "BotNest",
+			"logo": {
+			"@type": "ImageObject",
+			"url": `${Astro.site}/logo-botnest.png`
 			}
-			}, null, 2)
 		}
-		</script>
+		})}></script>
 
 		<style>
 			main {
