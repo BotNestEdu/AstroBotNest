@@ -33,30 +33,38 @@ const encodedUrl = encodeURIComponent(currentUrl);
 		<meta name="twitter:site" content="@botnest_edu" />
 
 		<script type="application/ld+json">
-		{JSON.stringify({
+		{
+			JSON.stringify({
 			"@context": "https://schema.org",
 			"@type": "BlogPosting",
 			headline: title,
 			description,
 			image: `${Astro.site}${heroImage || '/default-og.png'}`,
 			url: `${Astro.site}${Astro.url.pathname}`,
-			datePublished: pubDate instanceof Date ? pubDate.toISOString() : pubDate,
-			dateModified: updatedDate instanceof Date ? updatedDate.toISOString() : pubDate,
+			datePublished:
+				pubDate instanceof Date ? pubDate.toISOString() : String(pubDate),
+			dateModified:
+				updatedDate instanceof Date
+				? updatedDate.toISOString()
+				: pubDate instanceof Date
+				? pubDate.toISOString()
+				: String(pubDate),
 			author: author
-			? {
-				"@type": "Person",
-				name: author
+				? {
+					"@type": "Person",
+					name: author
 				}
-			: undefined,
+				: undefined,
 			publisher: {
-			"@type": "Organization",
-			name: "BotNest",
-			logo: {
+				"@type": "Organization",
+				name: "BotNest",
+				logo: {
 				"@type": "ImageObject",
 				url: `${Astro.site}/logo-botnest.png`
+				}
 			}
-			}
-		})}
+			}, null, 2)
+		}
 		</script>
 
 		<style>
