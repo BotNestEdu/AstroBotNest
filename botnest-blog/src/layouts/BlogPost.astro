@@ -43,7 +43,7 @@ const encodedUrl = encodeURIComponent(currentUrl);
 		"dateModified": updatedDate instanceof Date ? updatedDate.toISOString() : pubDate,
 		"author": {
 			"@type": "Person",
-			"name": author,
+			name: author, 
 			url: `${Astro.site}/about`
 		},
 		"publisher": {
