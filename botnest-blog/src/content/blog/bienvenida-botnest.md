@@ -1,11 +1,12 @@
 ---
-title: 'Bienvenidos a BotNest: un rincón para la tecnología creativa'
-description: Descubre qué es BotNest, por qué nace este proyecto y qué puedes encontrar en este blog dedicado a la educación, la robótica y la tecnología creativa.
-pubDate: 2025-05-21
-author: BotNest
-heroImage: /img/blog/botnest-bienvenida.png
-tags: [robótica educativa, bienvenida, BotNest]
-type: Journal
+title: "Bienvenidos a BotNest: un rincón para la tecnología creativa"
+description: "Descubre qué es BotNest, por qué nace este proyecto y qué puedes encontrar en este blog dedicado a la educación, la robótica y la tecnología creativa."
+pubDate: 2025-05-21T08:00:00Z
+updatedDate: 2025-05-21T08:00:00Z
+heroImage: "/img/blog/botnest-bienvenida.png"
+tags: ["robótica educativa", "bienvenida", "BotNest"]
+author: "BotNest"
+type: "Journal"
 ---
 
 ¡Hola! Bienvenido al primer post de **BotNest**.
