@@ -1,7 +1,3 @@
----
-type: Checklist
----
-
 # TODO – Mejoras para BotNest
 
 Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarrollando tu sitio web BotNest con Astro.
