@@ -20,11 +20,11 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 ## 🧩 Pendiente
 
 ### 1. Estilo de entradas del blog
-- [ ] Entender la cabecera de un post, de donde sale, se puede modificar
+- [x] Entender la cabecera de un post, de donde sale, se puede modificar
 - [ ] Mejorar visualmente el listado de posts (usar tarjetas o previews con imagen y resumen)
 - [ ] Añadir navegación entre entradas (post siguiente/anterior) - Relacionados
 - [x] Aplicar justificado automático a todo el texto de los posts
-- [ ] Añadir paginación si el número de entradas crece
+- [ ] Añadir paginación si el número de entradas crece (complicado)
 - [x] Cambiar texto Last updated on May 25, 2025
 - [x] Ver si tengo la web en inglés
 
@@ -34,9 +34,10 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 - [ ] Añadir `meta name="keywords"` en cada entrada (opcional)
 - [x] Garantizar que `description` e `image` sean únicas por entrada
 - [x] Añadir campo visible “autor” en cada post
-- [ ] Añadir imagen por defecto apra las og cards
+- [x] Añadir imagen por defecto apra las og cards
 - [ ] Revisar que se usa la imagen por defecto cuando no hay imagen
 - [x] Ser Google Friendly
+- [ ] Sospecho que el SEO y las cards las voy a tener que poner también en el resto de páginas de la web.
 - [ ] Por alguna extraña razón no me detecta el autor en el Search Google, lo he añadido por defecto
 
 ### 3. Botones de compartir
@@ -51,7 +52,7 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 - [ ] Mostrar etiquetas en la portada o menú lateral
 
 ### 5. Página “Acerca de” mejorada
-- [ ] Añadir foto/avatar personal (opcional)
+- [x] Añadir foto/avatar personal (opcional)
 - [ ] Añadir lista de herramientas favoritas o propósito del blog
 - [x] Mostrar imagen y descripción de Zumbit
 
@@ -62,6 +63,8 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 ### 7. Sitemap y RSS
 - [ ] Generar `sitemap.xml` automático
 - [ ] Activar feed RSS (`rss.xml`) para el blog
+- [ ] Google Search
+- [ ] Analíticas - Cloudflare Web Analytics
 
 ## 🧠 Extras (futuro opcional)
 - [ ] Modo oscuro
