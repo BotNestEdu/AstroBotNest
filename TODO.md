@@ -44,6 +44,7 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 - [ ] Mejorar los botones actuales para que incluyan: `<TÍTULO> <URL> vía @botnest_edu`
 - [ ] Convertirlos en componente Astro reutilizable (`<ShareButtons />`)
 - [ ] Añadir opción “copiar enlace”
+- [ ] Añadir botón Telegram
 - [x] (Opcional) Mostrar barra de compartir flotante como en Omicrono
 
 ### 4. Sistema de etiquetas o categorías

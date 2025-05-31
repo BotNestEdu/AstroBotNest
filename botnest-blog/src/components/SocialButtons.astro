@@ -1,0 +1,41 @@
+---
+const className = Astro.props.className ?? '';
+---
+
+<div class={`social-links ${className}`}>
+  <a href="https://instagram.com/botnest_edu" target="_blank" aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+  <a href="https://x.com/botnest_edu" target="_blank" aria-label="X (Twitter)">
+    <i class="fa-brands fa-x-twitter"></i>
+  </a>
+  <a href="https://www.youtube.com/@BotNest" target="_blank" aria-label="YouTube">
+    <i class="fa-brands fa-youtube"></i>
+  </a>
+  <a href="https://github.com/BotNestEdu" target="_blank" aria-label="GitHub">
+    <i class="fa-brands fa-github"></i>
+  </a>
+  <a href="https://t.me/botnest_edu" target="_blank" aria-label="Telegram">
+    <i class="fa-brands fa-telegram"></i>
+  </a>
+</div>
+
+<style>
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .social-links a {
+    font-size: 1.75rem;
+    color: var(--gray-dark);
+    transition: color 0.2s;
+  }
+
+  .social-links a:hover {
+    color: var(--accent);
+  }
+</style>
