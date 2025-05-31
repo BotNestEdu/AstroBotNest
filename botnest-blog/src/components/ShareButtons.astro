@@ -1,0 +1,63 @@
+---
+const {
+  title,
+  url = `${Astro.site}${Astro.url.pathname}`,
+  className = '' // permite personalizar: flotante o no
+} = Astro.props;
+
+const encodedUrl = encodeURIComponent(url);
+const encodedText = encodeURIComponent(title);
+---
+
+<div class={`share-buttons ${className}`}>
+  <span class="share-label">Comparte</span>
+  <a href={`https://x.com/intent/tweet?url=${encodedUrl}&text=${encodedText} – vía @botnest_edu`} target="_blank" rel="noopener noreferrer" aria-label="Compartir en X">
+    <i class="fa-brands fa-x-twitter"></i>
+  </a>
+  <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`} target="_blank" rel="noopener noreferrer" aria-label="Compartir en Facebook">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+  <a href={`https://wa.me/?text=${encodedText}%20${encodedUrl}`} target="_blank" rel="noopener noreferrer" aria-label="Compartir en WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <a href={`https://t.me/share/url?url=${encodedUrl}&text=${encodedText}`} target="_blank" rel="noopener noreferrer" aria-label="Compartir en Telegram">
+    <i class="fa-brands fa-telegram"></i>
+  </a>
+</div>
+
+<style>
+  .share-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    margin: 2em 0;
+  }
+
+  .share-buttons .share-label {
+    font-weight: bold;
+    margin-right: 0.5em;
+  }
+
+  .share-buttons a {
+    font-size: 1.5rem;
+    color: var(--gray-dark);
+    transition: color 0.2s;
+  }
+
+  .share-buttons a:hover {
+    color: var(--accent);
+  }
+
+  /* Si quieres que sea flotante, aplica esta clase */
+  .floating {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    padding: 0.5em 1em;
+    z-index: 50;
+  }
+</style>
