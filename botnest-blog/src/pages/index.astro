@@ -1,52 +1,42 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} image="/img/blog/botnest-bienvenida.png">
-  <Header />
-  <main>
-    <section class="text-center py-12 px-4 bg-gray-100 rounded shadow mb-10">
-      <h1 class="text-4xl font-bold mb-4">Bienvenido a <span class="text-[color:var(--accent)]">BotNest</span></h1>
-      <p class="text-lg text-gray-700 max-w-xl mx-auto">
-        Un espacio donde tecnología, creatividad y educación se encuentran. Robótica, IA, impresión 3D, programación y mucho más para aprender creando.
-      </p>
-    </section>
+<BaseLayout
+  title="Inicio | BotNest"
+  description="Explora robótica, IA, programación creativa y más en este rincón educativo"
+  image="/img/blog/botnest-bienvenida.png"
+>
+  <section class="text-center py-12 px-4 bg-gray-100 rounded shadow mb-10">
+    <h1 class="text-4xl font-bold mb-4">Bienvenido a <span class="text-[color:var(--accent)]">BotNest</span></h1>
+    <p class="text-lg text-gray-700 max-w-xl mx-auto">
+      Un espacio donde tecnología, creatividad y educación se encuentran. Robótica, IA, impresión 3D, programación y mucho más para aprender creando.
+    </p>
+  </section>
 
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold mb-2">¿Qué es BotNest?</h2>
-      <p>
-        Es un blog personal sobre tecnología educativa. Aquí comparto ideas, recursos, experiencias reales y actividades con herramientas como Arduino, mBot, Minecraft, Scratch, impresión 3D y más.
-      </p>
-    </section>
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-2">¿Qué encontrarás aquí?</h2>
+    <ul class="list-disc list-inside pl-4">
+      <li>Guías paso a paso para proyectos educativos</li>
+      <li>Noticias y reflexiones sobre robótica e IA</li>
+      <li>Actividades con software libre y herramientas creativas</li>
+      <li>Inspiración para el aula, el hogar o makerspaces</li>
+    </ul>
+  </section>
 
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold mb-2">¿Qué encontrarás aquí?</h2>
-      <ul class="list-disc list-inside pl-4">
-        <li>Guías paso a paso para proyectos educativos</li>
-        <li>Noticias y reflexiones sobre robótica e IA</li>
-        <li>Actividades con software libre y herramientas creativas</li>
-        <li>Inspiración para el aula, el hogar o makerspaces</li>
-      </ul>
-    </section>
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-2">¿Para quién está pensado?</h2>
+    <p>
+      Para docentes, familias, makers, estudiantes y curiosos que quieran aprender, enseñar o simplemente disfrutar de la tecnología desde un enfoque STEAM.
+    </p>
+  </section>
 
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold mb-2">¿Para quién está pensado?</h2>
-      <p>
-        Para docentes, familias, makers, estudiantes y curiosos que quieran aprender, enseñar o simplemente disfrutar de la tecnología desde un enfoque STEAM.
-      </p>
-    </section>
-
-    <section class="bg-gray-100 p-6 rounded mt-6 text-center shadow">
-      <p class="text-lg font-medium mb-2">
-        Explora el contenido, guarda tus favoritos y comparte lo que más te inspire.
-      </p>
-      <a href="/blog" class="inline-block mt-2 px-6 py-2 bg-[color:var(--accent)] text-white font-semibold rounded hover:bg-[color:var(--accent-dark)] transition">
-        Ver artículos del blog
-      </a>
-    </section>
-  </main>
-  <Footer />
+  <section class="bg-gray-100 p-6 rounded mt-6 text-center shadow">
+    <p class="text-lg font-medium mb-2">
+      Explora el contenido, guarda tus favoritos y comparte lo que más te inspire.
+    </p>
+    <a href="/blog" class="inline-block mt-2 px-6 py-2 bg-[color:var(--accent)] text-white font-semibold rounded hover:bg-[color:var(--accent-dark)] transition">
+      Ver artículos del blog
+    </a>
+  </section>
 </BaseLayout>
