@@ -13,6 +13,8 @@ interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
+const currentUrl = `${Astro.site}${Astro.url.pathname}`;
+const encodedUrl = encodeURIComponent(currentUrl);
 ---
 
 <!-- Global Metadata -->
@@ -53,7 +55,7 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta property="og:type" content="website" />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={`${Astro.site}/default-og.png`} />		
+<meta property="og:image" content={image} />		
 <meta property="og:url" content={currentUrl} />
 <meta property="og:site_name" content="BotNest" />
 <meta property="article:author" content={author} />
@@ -62,7 +64,7 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta name="twitter:image" content={`${Astro.site}/default-og.png`} />
+<meta name="twitter:image" content={heroImage ? `${image} />
 <meta name="twitter:creator" content="@botnest_edu" />
 <meta name="twitter:site" content="@botnest_edu" />
 		
