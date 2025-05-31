@@ -5,7 +5,6 @@ import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
-import SharelButtons from '../../components/ShareButtons.astro';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -13,7 +12,7 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
