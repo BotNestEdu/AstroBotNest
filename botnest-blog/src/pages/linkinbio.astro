@@ -1,0 +1,70 @@
+---
+import { SITE_TITLE } from '../consts';
+---
+
+<html lang="es">
+  <head>
+    <title>BotNest | Enlaces directos</title>
+    <meta name="description" content="Accede rápidamente a todas las redes y recursos de BotNest." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+  </head>
+  <body class="link-landing">
+    <div class="container">
+      <img src="/img/logo-botnest.png" alt="BotNest logo" class="logo" />
+
+      <h1>Encuentra a BotNest en...</h1>
+
+      <div class="links">
+        <a href="https://instagram.com/botnest_edu" target="_blank">Instagram</a>
+        <a href="https://x.com/botnest_edu" target="_blank">X (Twitter)</a>
+        <a href="https://www.youtube.com/@BotNest" target="_blank">YouTube</a>
+        <a href="https://t.me/botnest_edu" target="_blank">Canal de Telegram</a>
+        <a href="https://github.com/BotNestEdu" target="_blank">GitHub</a>
+        <a href="/" class="back-home">Ir al blog</a>
+      </div>
+    </div>
+
+    <style>
+      .link-landing {
+        margin: 0;
+        padding: 2em 1em;
+        font-family: sans-serif;
+        background: #f9f9f9;
+        text-align: center;
+      }
+
+      .logo {
+        width: 120px;
+        height: auto;
+        margin: 0 auto 1rem;
+      }
+
+      .links a {
+        display: block;
+        margin: 0.5em auto;
+        padding: 1em;
+        width: 100%;
+        max-width: 320px;
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #222;
+        transition: all 0.2s;
+      }
+
+      .links a:hover {
+        background: var(--accent-light, #e0f7fa);
+        color: var(--accent, #007b8f);
+      }
+
+      .back-home {
+        margin-top: 2em;
+        background: var(--accent, #007b8f);
+        color: white !important;
+      }
+    </style>
+  </body>
+</html>
