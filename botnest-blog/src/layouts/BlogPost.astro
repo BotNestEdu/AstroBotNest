@@ -8,6 +8,8 @@ import FormattedDate from '../components/FormattedDate.astro';
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage, author } = Astro.props;
+const currentUrl = `${Astro.site}${Astro.url.pathname}`;
+const encodedUrl = encodeURIComponent(currentUrl);
 ---
 
 <html lang="es">
