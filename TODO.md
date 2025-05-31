@@ -44,7 +44,7 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 - [ ] Mejorar los botones actuales para que incluyan: `<TÍTULO> <URL> vía @botnest_edu`
 - [ ] Convertirlos en componente Astro reutilizable (`<ShareButtons />`)
 - [ ] Añadir opción “copiar enlace”
-- [ ] (Opcional) Mostrar barra de compartir flotante como en Omicrono
+- [x] (Opcional) Mostrar barra de compartir flotante como en Omicrono
 
 ### 4. Sistema de etiquetas o categorías
 - [ ] Clasificar los posts por temas (Arduino, Scratch, IA...)
@@ -61,10 +61,10 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 - [ ] Alternativa simple: enlazar a redes con llamada a la acción
 
 ### 7. Sitemap y RSS
-- [ ] Generar `sitemap.xml` automático
-- [ ] Activar feed RSS (`rss.xml`) para el blog
-- [ ] Google Search
-- [ ] Analíticas - Cloudflare Web Analytics
+- [x] Generar `sitemap.xml` automático
+- [x] Activar feed RSS (`rss.xml`) para el blog
+- [x] Google Search
+- [x] Analíticas - Cloudflare Web Analytics
 
 ## 🧠 Extras (futuro opcional)
 - [ ] Modo oscuro

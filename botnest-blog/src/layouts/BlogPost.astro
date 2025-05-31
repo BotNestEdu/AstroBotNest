@@ -93,14 +93,34 @@ const encodedUrl = encodeURIComponent(currentUrl);
 			<!-- Botones de compartir -->
 			<div class="floating-share">
 				<span class="share-label">Comparte</span>
-				<a href={`https://x.com/share?url=${encodedUrl}`} target="_blank" rel="noopener noreferrer" aria-label="Compartir en X">
-				<i class="fa-brands fa-x-twitter"></i>
+
+				<a	href={`https://x.com/intent/tweet?url=${encodedUrl}&text=${encodeURIComponent(title + ' – vía @botnest_edu')}`}
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Compartir en X">
+					<i class="fa-brands fa-x-twitter"></i>
 				</a>
-				<a href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`} target="_blank" rel="noopener noreferrer" aria-label="Compartir en Facebook">
-				<i class="fa-brands fa-facebook-f"></i>
+
+				<a	href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`} 
+					target="_blank" 
+					rel="noopener noreferrer" 
+					aria-label="Compartir en Facebook">
+					<i class="fa-brands fa-facebook-f"></i>
 				</a>
-				<a href={`https://wa.me/?text=${encodedUrl}`} target="_blank" rel="noopener noreferrer" aria-label="Compartir en WhatsApp">
-				<i class="fa-brands fa-whatsapp"></i>
+
+				<a	href={`https://t.me/share/url?url=${encodedUrl}&text=${encodeURIComponent(title)}`}
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Compartir en Telegram" >
+					<i class="fa-brands fa-telegram"></i>
+				</a>
+
+
+				<a	href={`https://wa.me/?text=${encodedUrl}`} 
+					target="_blank" 
+					rel="noopener noreferrer" 
+					aria-label="Compartir en WhatsApp">
+					<i class="fa-brands fa-whatsapp"></i>
 				</a>
 			</div>
 		</main>
