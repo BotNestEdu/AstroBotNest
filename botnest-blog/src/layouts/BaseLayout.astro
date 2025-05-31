@@ -1,0 +1,48 @@
+---
+const {
+  title = 'BotNest',
+  description = 'Explora robótica, IA y creatividad digital con BotNest',
+  image = '/img/social-card.png',
+  children
+} = Astro.props;
+
+const currentUrl = `${Astro.site}${Astro.url.pathname}`;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="language" content="es" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={Astro.site + image} />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:site_name" content="BotNest" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={Astro.site + image} />
+    <meta name="twitter:site" content="@botnest_edu" />
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" title="BotNest RSS" href="/rss.xml" />
+
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fdc3d887b2b146899f56a6323c26743c"}'></script>
+    <!-- End Cloudflare Web Analytics -->
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
