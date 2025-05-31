@@ -8,57 +8,19 @@ import FormattedDate from '../components/FormattedDate.astro';
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage, author } = Astro.props;
-const currentUrl = `${Astro.site}${Astro.url.pathname}`;
-const encodedUrl = encodeURIComponent(currentUrl);
 ---
 
 <html lang="es">
 	<head>
-		<BaseHead title={title} description={description} />
-		<!-- Open Graph -->
-		<meta property="og:type" content="article" />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:image" content={heroImage ? `${Astro.site}${heroImage}` : `${Astro.site}/default-og.png`} />
-		<meta property="og:url" content={currentUrl} />
-		<meta property="og:site_name" content="BotNest" />
-		<meta property="article:author" content={author} />
-
-		<!-- Twitter Card -->
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content={title} />
-		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content={heroImage ? `${Astro.site}${heroImage}` : `${Astro.site}/default-og.png`} />
-		<meta name="twitter:creator" content="@botnest_edu" />
-		<meta name="twitter:site" content="@botnest_edu" />
-
-		<!-- Cloudflare Web Analytics -->
-		<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "311484a2b811488e8875e509e272996e"}'></script>
-		<!-- End Cloudflare Web Analytics -->
-
-		<script type="application/ld+json" set:html={JSON.stringify({
-		"@context": "https://schema.org",
-		"@type": "BlogPosting",
-		"headline": title,
-		"description": description,
-		"image": `${Astro.site}${heroImage || '/default-og.png'}`,
-		"url": `${Astro.site}${Astro.url.pathname}`,
-		"datePublished": pubDate instanceof Date ? pubDate.toISOString() : pubDate,
-		"dateModified": updatedDate instanceof Date ? updatedDate.toISOString() : pubDate,
-		"author": {
-			"@type": "Person",
-			name: "BotNest", 
-			url: `${Astro.site}/about`
-		},
-		"publisher": {
-			"@type": "Organization",
-			"name": "BotNest",
-			"logo": {
-			"@type": "ImageObject",
-			"url": `${Astro.site}/logo-botnest.png`
-			}
-		}
-		})}></script>
+		<BaseHead 
+			content={"article"}
+			title={title} 
+			description={description}  
+			image={heroImage}
+			pubDate={pubDate} 
+			updatedDate={updatedDate}
+			author={author}
+		/>
 
 		<style>
 			main {
