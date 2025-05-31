@@ -15,6 +15,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 const currentUrl = `${Astro.site}${Astro.url.pathname}`;
 const encodedUrl = encodeURIComponent(currentUrl);
+const author = "BotNest";
 ---
 
 <!-- Global Metadata -->
