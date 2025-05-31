@@ -1,14 +1,13 @@
----
-import { SITE_TITLE } from '../consts';
----
-
 <html lang="es">
   <head>
     <title>BotNest | Enlaces directos</title>
     <meta name="description" content="Accede rápidamente a todas las redes y recursos de BotNest." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="/favicon.ico" />
+    <link rel="alternate" type="application/rss+xml" title="BotNest RSS" href="/rss.xml" />
+    <script src="https://kit.fontawesome.com/YOUR_KIT.js" crossorigin="anonymous"></script>
   </head>
+
   <body class="link-landing">
     <div class="container">
       <img src="/img/logo-botnest.png" alt="BotNest logo" class="logo" />
@@ -16,54 +15,74 @@ import { SITE_TITLE } from '../consts';
       <h1>Encuentra a BotNest en...</h1>
 
       <div class="links">
-        <a href="https://instagram.com/botnest_edu" target="_blank">Instagram</a>
-        <a href="https://x.com/botnest_edu" target="_blank">X (Twitter)</a>
-        <a href="https://www.youtube.com/@BotNest" target="_blank">YouTube</a>
-        <a href="https://t.me/botnest_edu" target="_blank">Canal de Telegram</a>
-        <a href="https://github.com/BotNestEdu" target="_blank">GitHub</a>
-        <a href="/" class="back-home">Ir al blog</a>
+        <a href="https://instagram.com/botnest_edu" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        <a href="https://x.com/botnest_edu" target="_blank"><i class="fa-brands fa-x-twitter"></i> X (Twitter)</a>
+        <a href="https://www.youtube.com/@BotNest" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>
+        <a href="https://t.me/botnest_edu" target="_blank"><i class="fa-brands fa-telegram"></i> Canal de Telegram</a>
+        <a href="https://github.com/BotNestEdu" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="/rss.xml" target="_blank"><i class="fa-solid fa-rss"></i> RSS</a>
+        <a href="/" class="back-home"><i class="fa-solid fa-house"></i> Ir al blog</a>
       </div>
     </div>
 
     <style>
-      .link-landing {
-        margin: 0;
-        padding: 2em 1em;
-        font-family: sans-serif;
-        background: #f9f9f9;
-        text-align: center;
-      }
+        body.link-landing {
+            margin: 0;
+            padding: 2em 1em;
+            font-family: system-ui, sans-serif;
+            background-color: #f9f9f9;
+            background-image: url('/img/beehive.png');
+            background-size: 300px;
+            background-position: top center;
+            background-repeat: repeat;
+            text-align: center;
+            color: #222;
+        }
+
 
       .logo {
-        width: 120px;
-        height: auto;
+        width: 160px;
         margin: 0 auto 1rem;
       }
 
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+      }
+
       .links a {
-        display: block;
-        margin: 0.5em auto;
-        padding: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0.75em auto;
+        padding: 1.2em;
         width: 100%;
-        max-width: 320px;
+        max-width: 360px;
         background: white;
-        border: 1px solid #ccc;
-        border-radius: 8px;
+        border: 2px solid #ccc;
+        border-radius: 12px;
         text-decoration: none;
         font-weight: bold;
+        font-size: 1.1rem;
         color: #222;
         transition: all 0.2s;
+        gap: 0.6em;
       }
 
       .links a:hover {
         background: var(--accent-light, #e0f7fa);
         color: var(--accent, #007b8f);
+        border-color: var(--accent, #007b8f);
       }
 
       .back-home {
-        margin-top: 2em;
         background: var(--accent, #007b8f);
         color: white !important;
+        border-color: transparent;
+      }
+
+      .links i {
+        font-size: 1.3em;
       }
     </style>
   </body>
