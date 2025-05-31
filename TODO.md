@@ -35,9 +35,9 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 - [x] Garantizar que `description` e `image` sean únicas por entrada
 - [x] Añadir campo visible “autor” en cada post
 - [x] Añadir imagen por defecto apra las og cards
-- [ ] Revisar que se usa la imagen por defecto cuando no hay imagen
+- [x] Revisar que se usa la imagen por defecto cuando no hay imagen
 - [x] Ser Google Friendly
-- [ ] Sospecho que el SEO y las cards las voy a tener que poner también en el resto de páginas de la web.
+- [x] Estaba editando las SEO Cards en el fichero equivocado, ya está todo en el Head.astro
 - [ ] Por alguna extraña razón no me detecta el autor en el Search Google, lo he añadido por defecto
 
 ### 3. Botones de compartir
