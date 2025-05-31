@@ -51,18 +51,21 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={heroImage ? `${Astro.site}${heroImage}` : `${Astro.site}/default-og.png`} />		
+<meta property="og:url" content={currentUrl} />
+<meta property="og:site_name" content="BotNest" />
+<meta property="article:author" content={author} />
 
-<!-- Twitter -->
+<!-- Twitter Card -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
-
+<meta name="twitter:image" content={heroImage ? `${Astro.site}${heroImage}` : `${Astro.site}/default-og.png`} />
+<meta name="twitter:creator" content="@botnest_edu" />
+<meta name="twitter:site" content="@botnest_edu" />
+		
 <!-- Cloudflare Web Analytics -->
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "311484a2b811488e8875e509e272996e"}'></script>
 <!-- End Cloudflare Web Analytics -->
