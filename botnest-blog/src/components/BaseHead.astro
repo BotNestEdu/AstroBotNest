@@ -20,7 +20,7 @@ const {
 	content ="website", 
 	title, 
 	description, 
-	image = Astro.site + "/default-og.png", 
+	image = "/img/default-og.png", 
 	pubDate = "", 
 	updatedDate = "", 
 	author = "BotNest" } = Astro.props;
@@ -66,7 +66,7 @@ const encodedUrl = encodeURIComponent(currentUrl);
 <meta property="og:type" content={content} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={image} />
+<meta property="og:image" content={Astro.site + image} />
 <meta property="og:url" content={currentUrl} />
 <meta property="og:site_name" content="BotNest" />
 <meta property="article:author" content={author} />
@@ -75,7 +75,7 @@ const encodedUrl = encodeURIComponent(currentUrl);
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={image} />
+<meta name="twitter:image" content={Astro.site + image} />
 <meta name="twitter:creator" content="@botnest_edu" />
 <meta name="twitter:site" content="@botnest_edu" />
 		
