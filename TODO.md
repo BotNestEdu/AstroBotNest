@@ -41,10 +41,11 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 - [ ] Por alguna extraña razón no me detecta el autor en el Search Google, lo he añadido por defecto
 
 ### 3. Botones de compartir
-- [ ] Mejorar los botones actuales para que incluyan: `<TÍTULO> <URL> vía @botnest_edu`
-- [ ] Convertirlos en componente Astro reutilizable (`<ShareButtons />`)
-- [ ] Añadir opción “copiar enlace”
-- [ ] Añadir botón Telegram
+- [x] Mejorar los botones actuales para que incluyan: `<TÍTULO> <URL> vía @botnest_edu`
+- [x] Convertir los botones de compartir en componente Astro reutilizable (`<ShareButtons />`)
+- [x] Convertir los botones sociales en componente Astro reutilizable (`<SocialButtons />`)
+- [x] Añadir opción “copiar enlace”
+- [x] Añadir botón Telegram
 - [x] (Opcional) Mostrar barra de compartir flotante como en Omicrono
 
 ### 4. Sistema de etiquetas o categorías
@@ -54,7 +55,7 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 
 ### 5. Página “Acerca de” mejorada
 - [x] Añadir foto/avatar personal (opcional)
-- [ ] Añadir lista de herramientas favoritas o propósito del blog
+- [x] Añadir lista de herramientas favoritas o propósito del blog
 - [x] Mostrar imagen y descripción de Zumbit
 
 ### 6. Página de contacto

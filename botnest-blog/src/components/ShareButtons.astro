@@ -2,27 +2,46 @@
 const {
   title,
   url = `${Astro.site}${Astro.url.pathname}`,
-  className = '' // permite personalizar: flotante o no
+  className = ''
 } = Astro.props;
 
 const encodedUrl = encodeURIComponent(url);
 const encodedText = encodeURIComponent(title);
+
+let copied = false;
+
+function copyLink() {
+  navigator.clipboard.writeText(url).then(() => {
+    copied = true;
+    setTimeout(() => copied = false, 2000);
+  });
+}
 ---
 
 <div class={`share-buttons ${className}`}>
   <span class="share-label">Comparte</span>
+
   <a href={`https://x.com/intent/tweet?url=${encodedUrl}&text=${encodedText} – vía @botnest_edu`} target="_blank" rel="noopener noreferrer" aria-label="Compartir en X">
     <i class="fa-brands fa-x-twitter"></i>
   </a>
+
   <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`} target="_blank" rel="noopener noreferrer" aria-label="Compartir en Facebook">
     <i class="fa-brands fa-facebook-f"></i>
   </a>
+
   <a href={`https://wa.me/?text=${encodedText}%20${encodedUrl}`} target="_blank" rel="noopener noreferrer" aria-label="Compartir en WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
+
   <a href={`https://t.me/share/url?url=${encodedUrl}&text=${encodedText}`} target="_blank" rel="noopener noreferrer" aria-label="Compartir en Telegram">
     <i class="fa-brands fa-telegram"></i>
   </a>
+
+  <button type="button" on:click={() => copyLink()} aria-label="Copiar enlace">
+    <i class="fa-solid fa-link"></i>
+  </button>
+
+  {copied && <span class="copied-msg">✅ Enlace copiado</span>}
 </div>
 
 <style>
@@ -39,17 +58,27 @@ const encodedText = encodeURIComponent(title);
     margin-right: 0.5em;
   }
 
-  .share-buttons a {
+  .share-buttons a,
+  .share-buttons button {
     font-size: 1.5rem;
     color: var(--gray-dark);
     transition: color 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 
-  .share-buttons a:hover {
+  .share-buttons a:hover,
+  .share-buttons button:hover {
     color: var(--accent);
   }
 
-  /* Si quieres que sea flotante, aplica esta clase */
+  .copied-msg {
+    font-size: 0.9rem;
+    color: var(--accent);
+    margin-left: 0.5em;
+  }
+
   .floating {
     position: fixed;
     bottom: 1em;
@@ -60,6 +89,5 @@ const encodedText = encodeURIComponent(title);
     box-shadow: var(--box-shadow);
     padding: 0.5em 1em;
     z-index: 50;
-    }
-
+  }
 </style>
