@@ -4,89 +4,79 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<html lang="es">
-  <head>
-    <BaseHead 
-      title="Herramientas recomendadas"
-      description="Las mejores herramientas digitales que uso en BotNest: diseño 3D, programación, creatividad y educación STEAM."
-      image="/img/botnest-card.png"
-    />
-  </head>
+<BaseHead 
+  title="Herramientas recomendadas"
+  description="Las mejores herramientas digitales que uso en BotNest: diseño 3D, programación, creatividad y educación STEAM."
+  image="/img/botnest-card.png"
+/>
 
-  <body class="tools-page">
-    <Header />
+<Header />
 
-    <main>
-      <h1>Herramientas que uso en BotNest</h1>
+<main class="tools-page">
+  <h1>Herramientas que uso en BotNest</h1>
 
-        <div class="tools-grid">
-  <a href="https://www.tinkercad.com" title="Tinkercad" target="_blank" rel="noopener">
-    <img src="/img/herramientas/tinkercad.png" alt="Tinkercad logo" />
-  </a>
-  <a href="https://scratch.mit.edu" title="Scratch" target="_blank" rel="noopener">
-    <img src="/img/herramientas/scratch.png" alt="Scratch logo" />
-  </a>
-  <a href="https://mblock.makeblock.com" title="mBlock" target="_blank" rel="noopener">
-    <img src="/img/herramientas/mblock.png" alt="mBlock logo" />
-  </a>
-  <a href="https://code.org" title="Code.org" target="_blank" rel="noopener">
-    <img src="/img/herramientas/code_org.png" alt="Code.org logo" />
-  </a>
-  <a href="https://www.canva.com" title="Canva" target="_blank" rel="noopener">
-    <img src="/img/herramientas/canva.png" alt="Canva logo" />
-  </a>
-  <a href="https://libresprite.github.io" title="LibreSprite" target="_blank" rel="noopener">
-    <img src="/img/herramientas/libresprite.png" alt="LibreSprite logo" />
-  </a>
-  <a href="https://www.arduino.cc" title="Arduino" target="_blank" rel="noopener">
-    <img src="/img/herramientas/arduino.png" alt="Arduino logo" />
-  </a>
-</div>
+  <div class="tools-grid">
+    <a href="https://www.tinkercad.com" title="Tinkercad" target="_blank" rel="noopener">
+      <img src="/img/herramientas/tinkercad.png" alt="Tinkercad logo" />
+    </a>
+    <a href="https://scratch.mit.edu" title="Scratch" target="_blank" rel="noopener">
+      <img src="/img/herramientas/scratch.png" alt="Scratch logo" />
+    </a>
+    <a href="https://mblock.makeblock.com" title="mBlock" target="_blank" rel="noopener">
+      <img src="/img/herramientas/mblock.png" alt="mBlock logo" />
+    </a>
+    <a href="https://code.org" title="Code.org" target="_blank" rel="noopener">
+      <img src="/img/herramientas/code_org.png" alt="Code.org logo" />
+    </a>
+    <a href="https://www.canva.com" title="Canva" target="_blank" rel="noopener">
+      <img src="/img/herramientas/canva.png" alt="Canva logo" />
+    </a>
+    <a href="https://libresprite.github.io" title="LibreSprite" target="_blank" rel="noopener">
+      <img src="/img/herramientas/libresprite.png" alt="LibreSprite logo" />
+    </a>
+    <a href="https://www.arduino.cc" title="Arduino" target="_blank" rel="noopener">
+      <img src="/img/herramientas/arduino.png" alt="Arduino logo" />
+    </a>
+  </div>
+</main>
 
+<Footer />
 
+<style>
+  .tools-page {
+    font-family: system-ui, sans-serif;
+    background: #f9f9f9;
+    text-align: center;
+    padding: 2em 1em;
+  }
 
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
 
-    </main>
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    max-width: 960px;
+    margin: auto;
+  }
 
-    <Footer />
+  .tools-grid a {
+    display: inline-block;
+    transition: transform 0.2s;
+  }
 
-    <style>
-      body.tools-page {
-        font-family: system-ui, sans-serif;
-        background: #f9f9f9;
-        text-align: center;
-        padding: 2em 1em;
-      }
+  .tools-grid a:hover {
+    transform: scale(1.1);
+  }
 
-      h1 {
-        font-size: 1.8rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .tools-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
-        gap: 2rem;
-        justify-items: center;
-        align-items: center;
-        max-width: 960px;
-        margin: auto;
-      }
-
-      .tools-grid a {
-        display: inline-block;
-        transition: transform 0.2s;
-      }
-
-      .tools-grid a:hover {
-        transform: scale(1.1);
-      }
-
-      .tools-grid img {
-        max-width: 256px;
-        height: auto;
-        filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
-      }
-    </style>
-  </body>
-</html>
+  .tools-grid img {
+    max-width: 256px;
+    height: auto;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
+  }
+</style>
