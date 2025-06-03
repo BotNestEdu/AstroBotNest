@@ -75,3 +75,76 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 - [ ] Zona de descargas o recursos extra
 - [ ] Página de “Recursos” o “Herramientas”
 - [ ] netlify plugin?
+
+
+
+---
+
+## 🔄 MEJORAS FUNCIONALES Y DE USABILIDAD
+
+### Navegación y experiencia
+- [ ] Añadir buscador interno (Lunr.js o Algolia para sitios estáticos)
+- [ ] Implementar breadcrumbs para mejorar navegación entre secciones
+- [ ] Añadir tabla de contenidos flotante (TOC) en posts largos
+- [ ] Botón “Volver arriba” fijo en móvil/escritorio
+- [ ] Mejorar el scroll en dispositivos móviles (enfoque accesibilidad)
+
+---
+
+## 🎨 ESTÉTICA Y EXPERIENCIA VISUAL
+
+### Diseño y presentación
+- [ ] Añadir animaciones suaves (ej. con framer-motion)
+- [ ] Diseñar portadas visuales para las páginas de tags o categorías
+- [ ] Sistema de badges coloridos para etiquetas (`#Scratch`, `#IA`, etc.)
+- [ ] Permitir alternar vista en forma de tarjetas o lista de posts
+
+---
+
+## 🧠 CONTENIDO Y ESTRUCTURA
+
+### Blog y secciones informativas
+- [ ] Crear sección “Proyectos destacados” (BotNest Tools, Educa, Blog…)
+- [ ] Añadir “Lecturas recomendadas” al final de cada post
+- [ ] Incluir una sección “Comienza aquí” para orientar a nuevos visitantes
+- [ ] Crear un timeline con los hitos y publicaciones clave del proyecto
+
+---
+
+## 🌐 DIFUSIÓN Y COMUNIDAD
+
+### Promoción y canales externos
+- [ ] Añadir botón para suscripción RSS o newsletter (ej. ConvertKit o TinyLetter)
+
+### Comunidad y feedback
+- [ ] Sistema de comentarios con Giscus o Commento
+- [ ] Formulario de contacto para sugerencias de contenido
+- [ ] Crear sección “BotNest para docentes” con kits imprimibles y guías
+
+---
+
+## 🧰 MANTENIMIENTO Y ESCALABILIDAD
+
+### Código y desarrollo
+- [ ] Añadir `CONTRIBUTING.md` para futuras contribuciones
+- [ ] Separar datos de los posts en `.json` o `.mdx` para escalar más fácilmente
+- [ ] Crear componente de error o fallback para rutas no encontradas
+
+### Control de calidad
+- [ ] Validar automáticamente que cada entrada tenga `title`, `image`, `description`, `author`
+- [ ] Comprobador de enlaces rotos (script manual o GitHub Actions)
+- [ ] Crear entorno de staging para previsualizar contenido antes de publicarlo
+
+---
+
+## 🛠️ IDEAS ADICIONALES PARA EL PROYECTO
+
+### Recursos educativos y minijuegos
+- [ ] Página con recursos descargables (PDF, fichas, plantillas)
+- [ ] Módulo sobre IA educativa: herramientas y guías
+- [ ] Crear zona con minijuegos o quizzes interactivos
+
+### Zumbit, la abeja mascota
+- [ ] Página dedicada a Zumbit con expresiones, historia y recursos imprimibles
+- [ ] Sección “Zumbit recomienda” con enlaces destacados del blog
+- [ ] Usar a Zumbit como narradora visual (viñetas tipo cómic o texto destacado)
