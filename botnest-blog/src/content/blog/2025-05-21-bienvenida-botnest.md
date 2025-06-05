@@ -1,6 +1,7 @@
 ---
 title: "Bienvenidos a BotNest: un rincón para la tecnología creativa"
 description: "Descubre qué es BotNest, por qué nace este proyecto y qué puedes encontrar en este blog dedicado a la educación, la robótica y la tecnología creativa."
+slug: "bienvenida-botnest"
 pubDate: 2025-05-21T08:00:00Z
 updatedDate: 2025-05-21T08:00:00Z
 heroImage: "/img/blog/2025-05-21-bienvenida-botnest.png"

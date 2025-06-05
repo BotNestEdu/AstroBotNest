@@ -1,6 +1,7 @@
 ---
 title: 'CodeStrike: Programa en Python mientras juegas'
 description: Un juego gratuito en Steam que enseña programación en Python de forma divertida y gamificada.
+slug: "codestrike-python-juego"
 pubDate: 2025-06-05T08:00:00Z
 updatedDate: 2025-06-05T08:00:00Z
 heroImage: /img/blog/2025-06-05-codestrike-python-juego.png
