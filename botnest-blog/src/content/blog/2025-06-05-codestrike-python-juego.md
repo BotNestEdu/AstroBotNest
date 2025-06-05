@@ -15,7 +15,7 @@ Desarrollado por la startup india CodingKraft, el juego integra desafíos reales
 
 Diseñado para todos los niveles, desde principiantes hasta avanzados, *CodeStrike* permite aprender a programar mientras exploras, hackeas sistemas y resuelves misiones. Puedes usar autocompletado, validar errores y avanzar a tu ritmo.
 
-![Image](./img/blog/codestrike_python.jpg)
+![Image](/img/blog/codestrike_python.jpg)
 
 *CodeStrike* se lanzó en acceso anticipado el 27 de mayo de 2025 y estará disponible de forma gratuita en Steam durante su primer mes de lanzamiento. Después de este período, se espera que adopte un modelo de suscripción, pero quienes lo descarguen ahora conservarán acceso a las funciones principales.
 
