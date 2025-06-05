@@ -16,26 +16,37 @@ import Footer from '../components/Footer.astro';
   <body>
     <Header />
     <main>
-      <section class="about-hero">
-        <img src="/img/zumbit/speak.png" alt="Zumbit saludando" class="about-zumbit" />
-        <h1>¿Quién hay detrás de <strong>BotNest</strong>?</h1>
-        <p>
-          ¡Hola! Soy Héctor, creador del proyecto educativo <strong>BotNest</strong>, una iniciativa independiente dedicada a acercar la tecnología, la robótica, la inteligencia artificial y el diseño creativo a niños, familias y docentes.
-        </p>
-      </section>
+      <section class="mx-auto max-w-3xl px-4 py-10">
+  <h1 class="text-4xl font-bold mb-6">Hola, soy Héctor</h1>
 
-      <section class="about-content">
-        <h2>¿Qué es BotNest?</h2>
-        <p>
-          BotNest nace como un espacio abierto para compartir recursos, guías, experiencias y herramientas que fomenten el aprendizaje significativo a través de metodologías STEAM. Es un proyecto personal que combina tecnología, educación y creatividad.
-        </p>
+  <div class="mb-6">
+    <img src="/img/sobre-mi-gibli.png" alt="Retrato en estilo Studio Ghibli" class="rounded-2xl shadow-md w-full max-w-sm mx-auto mb-4" />
+    <p class="text-lg leading-relaxed">
+      Me apasiona la educación tecnológica, la creatividad digital y enseñar a peques, jóvenes y docentes a construir, programar y expresarse a través de herramientas como la robótica, el diseño 3D o la inteligencia artificial.
+    </p>
+    <p class="text-lg leading-relaxed mt-4">
+      A lo largo de mi trayectoria me he formado en desarrollo de software, administración de sistemas y ciberseguridad, pero sobre todo he centrado mi energía en compartir el conocimiento de forma cercana, lúdica y transformadora. Disfruto creando recursos educativos, dinamizando talleres, escribiendo artículos y diseñando experiencias que conecten con la curiosidad de quienes aprenden.
+    </p>
+    <p class="text-lg leading-relaxed mt-4">
+      BotNest nace como un espacio donde se une todo esto: tecnología, imaginación, educación y juego. Y por supuesto… ¡no estoy solo en esta aventura!
+    </p>
+  </div>
 
-        <h2>Conoce a <span class="zumbit-name">Zumbit</span> 🐝</h2>
-        <p>
-          Esta simpática abeja robotizada será tu guía en muchas secciones de la web y también la narradora de nuestros vídeos. Con su voz cercana y su energía positiva, Zumbit te acompañará en cada paso del aprendizaje. 
-        </p>
-        <img src="/img/zumbit/default.png" alt="Zumbit volando" class="about-zumbit-secondary" />
-      </section>
+  <hr class="my-10 border-gray-300" />
+
+  <h2 class="text-3xl font-bold mb-4">Conoce a Zumbit 🐝</h2>
+  <div class="flex flex-col md:flex-row items-center gap-6">
+    <img src="/img/zumbit/zumbit-default.png" alt="Zumbit saludando" class="w-48 h-auto" />
+    <div>
+      <p class="text-lg leading-relaxed">
+        Esta simpática abeja robot es la mascota de BotNest. Zumbit representa la energía, la curiosidad y el ingenio que queremos despertar en cada actividad. Con su antenita siempre conectada a nuevas ideas, Zumbit te acompañará en los talleres, entradas del blog, vídeos y recursos educativos.
+      </p>
+      <p class="text-lg leading-relaxed mt-4">
+        Además, Zumbit tiene una voz muy particular y pronto la escucharás contando historias, dando consejos y proponiendo retos tecnológicos. ¡Prepárate para verla zumbar por todos los rincones de BotNest!
+      </p>
+    </div>
+  </div>
+</section>
     </main>
     <Footer />
   </body>
