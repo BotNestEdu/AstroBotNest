@@ -123,6 +123,7 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 ### Sitemap
 - [x] Revisar que todas las entradas del blog estén correctamente listadas en `sitemap.xml`
 - [x] Generar el archivo robots.txt
+- [x] Agregar botnest.es a Bing
 
 ---
 
