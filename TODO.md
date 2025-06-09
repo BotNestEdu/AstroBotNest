@@ -77,6 +77,65 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 - [ ] netlify plugin?
 
 
+---
+
+---
+
+## 🏠 Mejora de la portada principal (`index.astro`)
+
+### Elementos principales a implementar
+- [ ] Añadir slider automático con los 2–3 últimos artículos del blog
+- [ ] Crear bloques o botones de acceso rápido a secciones clave (Blog, Herramientas, Zumbit, etc.)
+- [ ] Incluir sección “¿Qué puedes hacer aquí?” con 3 o 4 columnas informativas
+
+### Ideas previstas para más adelante
+- [ ] Añadir módulo “Recomendado por Zumbit” con post destacado manualmente
+- [ ] Incluir sección “Explora el mundo de Zumbit” cuando la página de la mascota esté más desarrollada
+
+---
+
+## 🏷️ Mejora del sistema de etiquetas (tags)
+
+### Visualización de tags
+- [ ] Mostrar los tags en cada artículo como enlaces (chips clicables)
+- [ ] Diseñar los chips de tags con estilo visual claro (bordes, colores suaves, hover)
+
+### Navegación por tags
+- [ ] Crear página dinámica `/tags/[tag].astro` que muestre todos los posts con esa etiqueta
+- [ ] Enlazar cada tag a su página correspondiente desde cada post
+- [ ] (Opcional) Añadir título descriptivo en la cabecera de la página de tag: “Artículos etiquetados con ‘IA’”
+
+### SEO y estructura
+- [ ] Asegurar que cada página de tag tenga metadatos mínimos (`title`, `description` basados en el tag)
+- [ ] Validar que los tags se mantengan en formato URL friendly (sin espacios, minúsculas)
+
+---
+
+## 🎨 Mejora visual y compatibilidad
+
+### Favicon
+- [ ] Añadir favicon en formato `.ico` para compatibilidad total con navegadores antiguos
+
+---
+
+## 🔎 Indexación y posicionamiento
+
+### Sitemap
+- [ ] Revisar que todas las entradas del blog estén correctamente listadas en `sitemap.xml`
+
+---
+
+## 🛡️ Protección y atribución de contenido
+
+### Copiar contenido
+- [ ] Capturar el evento de copiar texto y añadir automáticamente el texto: “(vía BotNest – https://botnest.es)”
+
+### Imágenes del blog
+- [ ] Añadir capa transparente sobre imágenes para evitar arrastre directo
+- [ ] Incluir marca de agua discreta (texto o logo) en la esquina inferior derecha de cada imagen del post
+
+
+
 
 ---
 
