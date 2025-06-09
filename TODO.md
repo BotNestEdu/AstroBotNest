@@ -121,7 +121,8 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 ## 🔎 Indexación y posicionamiento
 
 ### Sitemap
-- [ ] Revisar que todas las entradas del blog estén correctamente listadas en `sitemap.xml`
+- [x] Revisar que todas las entradas del blog estén correctamente listadas en `sitemap.xml`
+- [x] Generar el archivo robots.txt
 
 ---
 
