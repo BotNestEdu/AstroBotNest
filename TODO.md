@@ -114,7 +114,7 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 ## 🎨 Mejora visual y compatibilidad
 
 ### Favicon
-- [ ] Añadir favicon en formato `.ico` para compatibilidad total con navegadores antiguos
+- [x] Añadir favicon en formato `.ico` para compatibilidad total con navegadores antiguos
 
 ---
 
