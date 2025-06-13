@@ -84,8 +84,8 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 ## 🏠 Mejora de la portada principal (`index.astro`)
 
 ### Elementos principales a implementar
-- [ ] Añadir slider automático con los 2–3 últimos artículos del blog
-- [ ] Crear bloques o botones de acceso rápido a secciones clave (Blog, Herramientas, Zumbit, etc.)
+- [x] Añadir slider automático con los 2–3 últimos artículos del blog
+- [x] Listado de post
 - [ ] Incluir sección “¿Qué puedes hacer aquí?” con 3 o 4 columnas informativas
 
 ### Ideas previstas para más adelante

@@ -1,0 +1,123 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+  .slice(0, 3);
+---
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+<div class="swiper-container">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {posts.map((post) => (
+        <div class="swiper-slide">
+          <a href={`/blog/${post.data.slug}/`} class="slide-link">
+            <div class="slide-image-wrapper">
+              <img src={post.data.heroImage} alt={post.data.title} loading="lazy" />
+              <div class="slide-title">
+                <h3>{post.data.title}</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <!-- Botones de navegación -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- Paginación -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<script type="module" is:inline>
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  new Swiper('.swiper', {
+    loop: true,
+    autoplay: {
+      delay: 4000,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
+<style>
+.swiper-container {
+  max-width: 960px;
+  margin: 2rem auto;
+  position: relative;
+}
+
+.swiper {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  position: relative;
+}
+
+.slide-link {
+  display: block;
+  position: relative;
+  color: white;
+  text-decoration: none;
+}
+
+.slide-image-wrapper {
+  position: relative;
+}
+
+.slide-image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.slide-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  background-color: #2191A5; /* azul sólido sin transparencia */
+  color: #fff;
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.slide-title h3 {
+  margin: 0;
+}
+
+
+/* Botones de navegación */
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+  background: rgba(33, 145, 165, 0.7);
+  border-radius: 50%;
+  padding: 0.5rem;
+  width: 36px;
+  height: 36px;
+  top: 45%;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 18px;
+}
+</style>
