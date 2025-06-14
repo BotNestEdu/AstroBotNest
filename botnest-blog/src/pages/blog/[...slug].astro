@@ -18,4 +18,43 @@ const { Content } = await render(post);
 
 <BlogPost {...post.data}>
 	<Content />
+	{post.data.tags && (
+		<div class="post-tags">
+			<h4 class="tag-label">Etiquetas:</h4>
+			<ul class="tag-list">
+				{post.data.tags.map(tag => (
+				<li><a href={`/tags/${tag.toLowerCase()}/`}>#{tag}</a></li>
+				))}
+			</ul>
+		</div>
+	)}
 </BlogPost>
+
+<style>
+	.post-tags {
+	margin-top: 2rem;
+	}
+
+	.post-tags ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	}
+
+	.post-tags li a {
+	background: #f0f0f0;
+	border-radius: 999px;
+	padding: 0.3rem 0.8rem;
+	font-size: 0.875rem;
+	color: #274346;
+	text-decoration: none;
+	transition: background 0.2s;
+	}
+
+	.post-tags li a:hover {
+	background: #d8f3f5;
+	}
+</style>
+
