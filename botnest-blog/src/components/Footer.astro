@@ -27,6 +27,27 @@ const today = new Date();
 
 </footer>
 
+<script>
+  document.addEventListener('copy', function (e) {
+    const selection = window.getSelection();
+    if (!selection) return;
+
+    const pageUrl = window.location.href;
+    const attribution = `\n(vía BotNest – https://botnest.es)\n`;
+
+    const copiedText = selection.toString() + attribution;
+
+    if (e.clipboardData) {
+      e.clipboardData.setData('text/plain', copiedText);
+    } else if (window.clipboardData) {
+      window.clipboardData.setData('Text', copiedText);
+    }
+
+    e.preventDefault(); // cancela la acción original
+  });
+</script>
+
+
 <style>
 	footer {
 		padding: 2em 1em 6em 1em;

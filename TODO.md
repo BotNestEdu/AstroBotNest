@@ -21,7 +21,7 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 
 ### 1. Estilo de entradas del blog
 - [x] Entender la cabecera de un post, de donde sale, se puede modificar
-- [ ] Mejorar visualmente el listado de posts (usar tarjetas o previews con imagen y resumen)
+- [x] Mejorar visualmente el listado de posts (usar tarjetas o previews con imagen y resumen)
 - [ ] Añadir navegación entre entradas (post siguiente/anterior) - Relacionados
 - [x] Aplicar justificado automático a todo el texto de los posts
 - [ ] Añadir paginación si el número de entradas crece (complicado)
@@ -49,8 +49,8 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 - [x] (Opcional) Mostrar barra de compartir flotante como en Omicrono
 
 ### 4. Sistema de etiquetas o categorías
-- [ ] Clasificar los posts por temas (Arduino, Scratch, IA...)
-- [ ] Crear páginas por etiqueta/categoría (`/tags/educacion`, etc.)
+- [x] Clasificar los posts por temas (Arduino, Scratch, IA...)
+- [x] Crear páginas por etiqueta/categoría (`/tags/educacion`, etc.)
 - [ ] Mostrar etiquetas en la portada o menú lateral
 
 ### 5. Página “Acerca de” mejorada
@@ -97,8 +97,8 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 ## 🏷️ Mejora del sistema de etiquetas (tags)
 
 ### Visualización de tags
-- [ ] Mostrar los tags en cada artículo como enlaces (chips clicables)
-- [ ] Diseñar los chips de tags con estilo visual claro (bordes, colores suaves, hover)
+- [x] Mostrar los tags en cada artículo como enlaces (chips clicables)
+- [x] Diseñar los chips de tags con estilo visual claro (bordes, colores suaves, hover)
 
 ### Navegación por tags
 - [x] Crear página dinámica `/tags/[tag].astro` que muestre todos los posts con esa etiqueta
@@ -130,7 +130,7 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 ## 🛡️ Protección y atribución de contenido
 
 ### Copiar contenido
-- [ ] Capturar el evento de copiar texto y añadir automáticamente el texto: “(vía BotNest – https://botnest.es)”
+- [x] Capturar el evento de copiar texto y añadir automáticamente el texto: “(vía BotNest – https://botnest.es)”
 
 ### Imágenes del blog
 - [ ] Añadir capa transparente sobre imágenes para evitar arrastre directo
