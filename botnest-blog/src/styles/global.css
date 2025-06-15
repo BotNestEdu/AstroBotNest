@@ -259,3 +259,25 @@ header {
 	font-weight: bold;
 	color: rgb(var(--gray-dark));
 }
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 1.5rem;
+  background-color: #2191A5;
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  width: 44px;
+  height: 44px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #166776;
+}

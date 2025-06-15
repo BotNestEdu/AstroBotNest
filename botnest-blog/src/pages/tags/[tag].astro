@@ -22,20 +22,26 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 
+// Convertir slug inverso para mostrar en título y descripción
+const readableTag = tag.replace(/-/g, ' ');
+const titleCase = readableTag.replace(/\b\w/g, l => l.toUpperCase());
+
 const posts = (await getCollection('blog')).filter((post) =>
-  (post.data.tags || []).some(
-    (t) => slugify(t) === tag
-  )
+  (post.data.tags || []).some((t) => slugify(t) === tag)
 );
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
-    <BaseHead title={`#${tag} | BotNest`} description={`Artículos etiquetados como "${tag}"`} />
+    <BaseHead 
+      title={`Artículos sobre ${titleCase} | BotNest`} 
+      description={`Explora todos los artículos etiquetados con "${readableTag}"`} 
+    />
+    <link rel="canonical" href={`https://botnest.es/tags/${tag}/`} />
     <style>
       main {
-        max-width: 1100px;
+        max-width: 960px;
         margin: 0 auto;
         padding: 3rem 1rem;
       }
@@ -93,23 +99,25 @@ const posts = (await getCollection('blog')).filter((post) =>
   </head>
   <body>
     <Header />
-    <main>
-      <h1>Artículos etiquetados con <strong>{tag}</strong></h1>
+    <main role="main" aria-label={`Artículos con la etiqueta ${readableTag}`}>
+      <h1>Artículos etiquetados con <strong>{readableTag}</strong></h1>
 
       {
         posts.length === 0 ? (
           <p class="no-posts">No hay artículos con esta etiqueta aún.</p>
         ) : (
-          <div class="tile-grid">
+          <section class="tile-grid">
             {
               posts.map((post) => (
-                <a href={`/blog/${post.id}/`} class="tile">
-                  <img src={post.data.heroImage} alt={post.data.title} />
-                  <h3>{post.data.title}</h3>
-                </a>
+                <article class="tile">
+                  <a href={`/blog/${post.id}/`}>
+                    <img src={post.data.heroImage} alt={post.data.title} />
+                    <h3>{post.data.title}</h3>
+                  </a>
+                </article>
               ))
             }
-          </div>
+          </section>
         )
       }
     </main>

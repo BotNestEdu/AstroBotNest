@@ -101,13 +101,13 @@ Este archivo recoge tareas pendientes y mejoras opcionales para seguir desarroll
 - [ ] Diseñar los chips de tags con estilo visual claro (bordes, colores suaves, hover)
 
 ### Navegación por tags
-- [ ] Crear página dinámica `/tags/[tag].astro` que muestre todos los posts con esa etiqueta
-- [ ] Enlazar cada tag a su página correspondiente desde cada post
-- [ ] (Opcional) Añadir título descriptivo en la cabecera de la página de tag: “Artículos etiquetados con ‘IA’”
+- [x] Crear página dinámica `/tags/[tag].astro` que muestre todos los posts con esa etiqueta
+- [x] Enlazar cada tag a su página correspondiente desde cada post
+- [x] (Opcional) Añadir título descriptivo en la cabecera de la página de tag: “Artículos etiquetados con ‘IA’”
 
 ### SEO y estructura
-- [ ] Asegurar que cada página de tag tenga metadatos mínimos (`title`, `description` basados en el tag)
-- [ ] Validar que los tags se mantengan en formato URL friendly (sin espacios, minúsculas)
+- [x] Asegurar que cada página de tag tenga metadatos mínimos (`title`, `description` basados en el tag)
+- [x] Validar que los tags se mantengan en formato URL friendly (sin espacios, minúsculas)
 
 ---
 

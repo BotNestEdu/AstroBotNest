@@ -6,6 +6,25 @@ const today = new Date();
 <footer>
 	&copy; {today.getFullYear()} BotNest. Todos los derechos reservados.
 	<SocialButtons class="social-links" />
+
+	<button id="scrollToTopBtn" aria-label="Volver arriba">↑</button>
+
+	<script>
+	const btn = document.getElementById('scrollToTopBtn');
+
+	window.addEventListener('scroll', () => {
+		if (window.scrollY > 300) {
+		btn.style.display = 'block';
+		} else {
+		btn.style.display = 'none';
+		}
+	});
+
+	btn.addEventListener('click', () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	});
+	</script>
+
 </footer>
 
 <style>
