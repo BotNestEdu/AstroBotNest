@@ -2,6 +2,7 @@
 import { type CollectionEntry, getCollection } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
 import { render } from 'astro:content';
+import { slugify } from '../../utils/slugify';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
@@ -20,14 +21,15 @@ const { Content } = await render(post);
 	<Content />
 	{post.data.tags && (
 		<div class="post-tags">
-			<h4 class="tag-label">Etiquetas:</h4>
+			<h5 class="tag-label">Etiquetas:</h5>
 			<ul class="tag-list">
-				{post.data.tags.map(tag => (
-				<li><a href={`/tags/${tag.toLowerCase()}/`}>#{tag}</a></li>
-				))}
+			{post.data.tags.map(tag => (
+				<li><a href={`/tags/${slugify(tag)}/`}>{tag}</a></li>
+			))}
 			</ul>
 		</div>
 	)}
+
 </BlogPost>
 
 <style>
