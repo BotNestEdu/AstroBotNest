@@ -12,18 +12,19 @@ import { SITE_TITLE } from '../consts';
       class="h-20 md:h-24 lg:h-28 w-auto mx-auto logo"
     />
 
-    <!-- Botón hamburguesa (solo visible en móvil) -->
-    <button id="menu-toggle" class="md:hidden text-3xl mt-2" aria-label="Abrir menú">
-      ☰
-    </button>
+    <!-- Botón hamburguesa -->
+	<button id="menu-toggle" class="hamburger" aria-label="Abrir menú">
+	☰
+	</button>
 
-    <!-- Menú de navegación -->
-    <nav id="main-menu" class="flex flex-col md:flex-row items-center gap-2 md:gap-6 md:static absolute top-28 left-1/2 -translate-x-1/2 bg-white shadow-md p-4 rounded-md md:shadow-none md:p-0 md:bg-transparent md:translate-x-0 z-50 hidden md:flex">
-      <HeaderLink href="/">Inicio</HeaderLink>
-      <HeaderLink href="/blog">Blog</HeaderLink>
-      <HeaderLink href="/herramientas">Herramientas</HeaderLink>
-      <HeaderLink href="/about">Acerca de</HeaderLink>
-    </nav>
+	<!-- Menú principal -->
+	<nav id="main-menu" class="main-nav">
+	<HeaderLink href="/">Inicio</HeaderLink>
+	<HeaderLink href="/blog">Blog</HeaderLink>
+	<HeaderLink href="/herramientas">Herramientas</HeaderLink>
+	<HeaderLink href="/about">Acerca de</HeaderLink>
+	</nav>
+
 
     <SocialButtons class="mt-2 text-gray-700 justify-center gap-4 hidden md:flex" />
   </div>
@@ -36,11 +37,12 @@ import { SITE_TITLE } from '../consts';
       const toggle = document.getElementById('menu-toggle');
       const menu = document.getElementById('main-menu');
       toggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
+        menu.classList.toggle('open');
       });
     });
   }
 </script>
+
 
 <style>
 	header {
@@ -66,4 +68,38 @@ import { SITE_TITLE } from '../consts';
 	nav a.active {
 		border-bottom-color: var(--accent);
 	}
+	/* Estilo general */
+	.hamburger {
+	font-size: 1.8rem;
+	background: none;
+	border: none;
+	cursor: pointer;
+	display: none;
+	margin-top: 0.5rem;
+	}
+
+	.main-nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+	}
+
+	@media (max-width: 768px) {
+	.hamburger {
+		display: block;
+	}
+
+	.main-nav {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 1rem;
+	}
+
+	.main-nav.open {
+		display: flex;
+	}
+	}
+
 </style>
