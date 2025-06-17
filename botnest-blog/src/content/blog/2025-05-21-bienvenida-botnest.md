@@ -4,7 +4,7 @@ description: "Descubre qué es BotNest, por qué nace este proyecto y qué puede
 slug: "bienvenida-botnest"
 pubDate: 2025-05-21T08:00:00Z
 updatedDate: 2025-05-21T08:00:00Z
-heroImage: "/img/blog/2025-05-21-bienvenida-botnest.png"
+heroImage: "/img/blog/hero/2025-05-21-bienvenida-botnest.png"
 tags: ["robótica educativa", "bienvenida", "BotNest"]
 author: "BotNest"
 type: "Journal"

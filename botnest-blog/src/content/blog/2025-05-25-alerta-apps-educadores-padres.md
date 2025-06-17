@@ -4,7 +4,7 @@ description: "Descubre qué apps pueden representar riesgos para niños y adoles
 slug: "alerta-apps-educadores-padres"
 pubDate: 2025-05-25T08:00:00Z
 updatedDate: 2025-05-25T08:00:00Z
-heroImage: "/img/blog/2025-05-25-alerta-apps-educadores-padres.png"
+heroImage: "/img/blog/hero/2025-05-25-alerta-apps-educadores-padres.png"
 tags: ["educación digital", "familias", "ciberseguridad", "tecnología", "apps"]
 author: "BotNest"
 type: "Journal"

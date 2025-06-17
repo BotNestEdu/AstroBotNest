@@ -4,7 +4,7 @@ description: Un juego gratuito en Steam que enseña programación en Python de f
 slug: "codestrike-python-juego"
 pubDate: 2025-06-05T08:00:00Z
 updatedDate: 2025-06-05T08:00:00Z
-heroImage: /img/blog/2025-06-05-codestrike-python-juego.png
+heroImage: /img/blog/hero/2025-06-05-codestrike-python-juego.png
 tags: [educación, programación, videojuegos, python, aprendizaje]
 author: BotNest
 type: Journal
