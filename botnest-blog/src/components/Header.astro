@@ -4,7 +4,7 @@ import SocialButtons from './SocialButtons.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header class="py-6 bg-white shadow-sm">
+<header class="py-6 bg-white shadow-sm relative">
   <div class="header-wrapper flex flex-col items-center justify-center text-center gap-4">
     <img
       src="/img/logo-botnest.png"
@@ -12,19 +12,40 @@ import { SITE_TITLE } from '../consts';
       class="h-20 md:h-24 lg:h-28 w-auto mx-auto logo"
     />
 
-    <nav class="flex flex-col items-center gap-2">
-      <div class="flex flex-wrap justify-center gap-6">
-        <HeaderLink href="/">Inicio</HeaderLink>
-        <HeaderLink href="/blog">Blog</HeaderLink>
+    <!-- Botón hamburguesa (solo en móvil) -->
+	<button id="menu-toggle" class="hamburger" aria-label="Abrir menú">
+	☰
+	</button>
+
+	<!-- Menú principal -->
+	<nav id="main-menu" class="main-nav">
+	<div class="menu-links">
+		<HeaderLink href="/">Inicio</HeaderLink>
+		<HeaderLink href="/blog">Blog</HeaderLink>
 		<HeaderLink href="/herramientas">Herramientas</HeaderLink>
-        <HeaderLink href="/about">Acerca de</HeaderLink>
-      </div>
+		<HeaderLink href="/about">Acerca de</HeaderLink>
+	</div>
+	</nav>
 
-    <SocialButtons class="mt-2 text-gray-700 justify-center gap-4" />
 
-    </nav>
+    <SocialButtons class="mt-2 text-gray-700 justify-center gap-4 hidden md:flex" />
   </div>
 </header>
+
+<!-- Script para toggle -->
+<script>
+  if (typeof window !== 'undefined') {
+    window.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('main-menu');
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('open');
+      });
+    });
+  }
+</script>
+
+
 <style>
 	header {
 		margin: 0;
@@ -36,15 +57,9 @@ import { SITE_TITLE } from '../consts';
 		margin: 0;
 		font-size: 1em;
 	}
-
 	h2 a,
 	h2 a.active {
 		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
 	}
 	nav a {
 		padding: 1em 0.5em;
@@ -53,16 +68,48 @@ import { SITE_TITLE } from '../consts';
 		text-decoration: none;
 	}
 	nav a.active {
-		text-decoration: none;
 		border-bottom-color: var(--accent);
 	}
-	.social-links,
-	.social-links a {
-		display: flex;
-	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
-	}
+	/* Mostrar hamburguesa solo en móvil */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+/* Menú por defecto en horizontal */
+.main-nav .menu-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Móvil: ocultar menú y cambiar a vertical */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .main-nav {
+    width: 100%;
+  }
+
+  .main-nav .menu-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .main-nav.open .menu-links {
+    display: flex;
+  }
+}
+
+
 </style>
