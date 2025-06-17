@@ -12,17 +12,19 @@ import { SITE_TITLE } from '../consts';
       class="h-20 md:h-24 lg:h-28 w-auto mx-auto logo"
     />
 
-    <!-- Botón hamburguesa -->
+    <!-- Botón hamburguesa (solo en móvil) -->
 	<button id="menu-toggle" class="hamburger" aria-label="Abrir menú">
 	☰
 	</button>
 
 	<!-- Menú principal -->
 	<nav id="main-menu" class="main-nav">
-	<HeaderLink href="/">Inicio</HeaderLink>
-	<HeaderLink href="/blog">Blog</HeaderLink>
-	<HeaderLink href="/herramientas">Herramientas</HeaderLink>
-	<HeaderLink href="/about">Acerca de</HeaderLink>
+	<div class="menu-links">
+		<HeaderLink href="/">Inicio</HeaderLink>
+		<HeaderLink href="/blog">Blog</HeaderLink>
+		<HeaderLink href="/herramientas">Herramientas</HeaderLink>
+		<HeaderLink href="/about">Acerca de</HeaderLink>
+	</div>
 	</nav>
 
 
@@ -68,38 +70,46 @@ import { SITE_TITLE } from '../consts';
 	nav a.active {
 		border-bottom-color: var(--accent);
 	}
-	/* Estilo general */
-	.hamburger {
-	font-size: 1.8rem;
-	background: none;
-	border: none;
-	cursor: pointer;
-	display: none;
-	margin-top: 0.5rem;
-	}
+	/* Mostrar hamburguesa solo en móvil */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
 
-	.main-nav {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 1rem;
-	}
+/* Menú por defecto en horizontal */
+.main-nav .menu-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
 
-	@media (max-width: 768px) {
-	.hamburger {
-		display: block;
-	}
+/* Móvil: ocultar menú y cambiar a vertical */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
 
-	.main-nav {
-		display: none;
-		flex-direction: column;
-		align-items: center;
-		margin-top: 1rem;
-	}
+  .main-nav {
+    width: 100%;
+  }
 
-	.main-nav.open {
-		display: flex;
-	}
-	}
+  .main-nav .menu-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .main-nav.open .menu-links {
+    display: flex;
+  }
+}
+
 
 </style>
