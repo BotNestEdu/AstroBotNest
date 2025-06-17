@@ -2,8 +2,8 @@
 title: "¿Por qué el símbolo de encendido es así?"
 description: "Una curiosidad tecnológica: el origen del botón de power y su relación con los números binarios."
 slug: "curiosidad-simbolo-power"
-pubDate: 2025-06-15T10:00:00Z
-updatedDate: 2025-06-15T10:00:00Z
+pubDate: 2025-06-17T10:00:00Z
+updatedDate: 2025-06-17T10:00:00Z
 heroImage: "/img/blog/hero/2025-06-17-curiosidad_simbolo_power.png"
 tags: ["curiosidades", "informática", "educación", "símbolos", "cultura digital"]
 author: "BotNest"
