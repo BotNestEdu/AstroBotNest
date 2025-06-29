@@ -9,32 +9,51 @@
 
 /* 2. Variables globales */
 :root {
-	--accent: 33, 145, 165;
-	--accent-dark: 26, 109, 126;
-	--black: 39, 67, 70; /* Texto fuerte */
-	--gray: 91, 91, 91;
-	--gray-light: 232, 236, 241;
-	--gray-dark: 45, 48, 53;
-	--gray-gradient: rgba(232, 236, 241, 0.5), #fff;
-	--box-shadow:
-		0 2px 6px rgba(var(--gray), 0.25),
-		0 8px 24px rgba(var(--gray), 0.33),
-		0 16px 32px rgba(var(--gray), 0.33);
+        --accent: 33, 145, 165;
+        --accent-dark: 26, 109, 126;
+        --black: 39, 67, 70; /* Texto fuerte */
+        --gray: 91, 91, 91;
+        --gray-light: 232, 236, 241;
+        --gray-dark: 45, 48, 53;
+        --gray-gradient: rgba(232, 236, 241, 0.5), #fff;
+        --box-shadow:
+                0 2px 6px rgba(var(--gray), 0.25),
+                0 8px 24px rgba(var(--gray), 0.33),
+                0 16px 32px rgba(var(--gray), 0.33);
+
+        /* Variables para el esquema de colores */
+        --bg-body: #fff;
+        --bg-element: #fff;
+        --bg-secondary: rgb(var(--gray-light));
+        --text-color: rgb(var(--gray-dark));
+        --heading-color: rgb(var(--black));
+        color-scheme: light dark;
+}
+
+/* Tema oscuro */
+html[data-theme='dark'] {
+        --bg-body: #1a1a1a;
+        --bg-element: #222;
+        --bg-secondary: #333;
+        --text-color: #e5e5e5;
+        --heading-color: #ffffff;
+        --gray-gradient: rgba(45, 48, 53, 0.5), #000;
 }
 
 /* 3. Estilos base */
 body {
-	font-family: 'Inter', sans-serif;
-	margin: 0;
-	padding: 0;
-	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
-	font-size: 20px;
-	line-height: 1.7;
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        background: linear-gradient(var(--gray-gradient)) no-repeat,
+                    var(--bg-body);
+        background-size: 100% 600px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        color: var(--text-color);
+        font-size: 20px;
+        line-height: 1.7;
 }
 
 main {
@@ -45,11 +64,11 @@ main {
 
 /* 4. Titulares */
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Inter', sans-serif;
-	font-weight: 700;
-	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
-	line-height: 1.2;
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        margin: 0 0 0.5rem 0;
+        color: var(--heading-color);
+        line-height: 1.2;
 }
 
 h1 { font-size: 3.052em; }
@@ -110,9 +129,9 @@ table {
 }
 
 code {
-	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
-	border-radius: 2px;
+        padding: 2px 5px;
+        background-color: var(--bg-secondary);
+        border-radius: 2px;
 }
 
 pre {
@@ -132,8 +151,8 @@ blockquote {
 }
 
 hr {
-	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
+        border: none;
+        border-top: 1px solid var(--bg-secondary);
 }
 
 /* 8. Accesibilidad */
@@ -158,11 +177,11 @@ hr {
 
 /* 10. Hero */
 .hero {
-	text-align: center;
-	padding: 4em 1em 2em;
-	background-color: var(--gray-light);
-	border-radius: 8px;
-	box-shadow: var(--box-shadow);
+        text-align: center;
+        padding: 4em 1em 2em;
+        background-color: var(--bg-secondary);
+        border-radius: 8px;
+        box-shadow: var(--box-shadow);
 }
 
 .hero-logo {
@@ -188,9 +207,9 @@ hr {
 
 /* 11. Header y navegación */
 header {
-	background: white;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-	padding: 1em 0 0.5em;
+        background: var(--bg-element);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        padding: 1em 0 0.5em;
 }
 
 .header-wrapper {
@@ -228,8 +247,8 @@ header {
 }
 
 .main-nav a {
-	color: rgb(var(--gray-dark));
-	text-decoration: none;
+        color: var(--text-color);
+        text-decoration: none;
 }
 
 .main-nav a:hover {
@@ -237,24 +256,24 @@ header {
 }
 
 .floating-share {
-	position: fixed;
-	bottom: 1.5rem;
-	left: 50%;
-	transform: translateX(-50%);
-	background-color: white;
-	padding: 0.5em 1em;
-	border-radius: 2em;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	display: flex;
-	align-items: center;
-	gap: 1em;
-	z-index: 999;
-	font-size: 1.2em;
+        position: fixed;
+        bottom: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--bg-element);
+        padding: 0.5em 1em;
+        border-radius: 2em;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        z-index: 999;
+        font-size: 1.2em;
 }
 
 .floating-share i {
-	color: rgb(var(--gray-dark));
-	transition: color 0.2s ease;
+        color: var(--text-color);
+        transition: color 0.2s ease;
 }
 
 .floating-share i:hover {
@@ -262,9 +281,9 @@ header {
 }
 
 .floating-share .share-label {
-	font-size: 0.9em;
-	font-weight: bold;
-	color: rgb(var(--gray-dark));
+        font-size: 0.9em;
+        font-weight: bold;
+        color: var(--text-color);
 }
 
 #scrollToTopBtn {

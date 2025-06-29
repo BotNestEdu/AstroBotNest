@@ -4,7 +4,7 @@ import SocialButtons from './SocialButtons.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header class="py-6 bg-white shadow-sm relative">
+<header class="py-6 shadow-sm relative">
   <div class="header-wrapper flex flex-col items-center justify-center text-center gap-4">
     <img
       src="/img/logo-botnest.png"
@@ -27,6 +27,10 @@ import { SITE_TITLE } from '../consts';
     </div>
     </nav>
 
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar modo">
+      🌙
+    </button>
+
 
     <SocialButtons class="mt-2 text-gray-700 justify-center gap-4 hidden md:flex" />
   </div>
@@ -41,18 +45,33 @@ import { SITE_TITLE } from '../consts';
       toggle.addEventListener('click', () => {
         menu.classList.toggle('open');
       });
+
+      const themeBtn = document.getElementById('theme-toggle');
+      const root = document.documentElement;
+      const stored = localStorage.getItem('theme');
+      if (stored === 'dark') {
+        root.dataset.theme = 'dark';
+        themeBtn.textContent = '☀';
+      }
+
+      themeBtn.addEventListener('click', () => {
+        const isDark = root.dataset.theme === 'dark';
+        root.dataset.theme = isDark ? 'light' : 'dark';
+        localStorage.setItem('theme', root.dataset.theme);
+        themeBtn.textContent = isDark ? '🌙' : '☀';
+      });
     });
   }
 </script>
 
 
 <style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
+        header {
+                margin: 0;
+                padding: 0 1em;
+                background: var(--bg-element);
+                box-shadow: 0 2px 8px rgba(var(--black), 5%);
+        }
 	h2 {
 		margin: 0;
 		font-size: 1em;
@@ -61,12 +80,12 @@ import { SITE_TITLE } from '../consts';
 	h2 a.active {
 		text-decoration: none;
 	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
+        nav a {
+                padding: 1em 0.5em;
+                color: var(--heading-color);
+                border-bottom: 4px solid transparent;
+                text-decoration: none;
+        }
 	nav a.active {
 		border-bottom-color: var(--accent);
 	}
@@ -109,6 +128,14 @@ import { SITE_TITLE } from '../consts';
   .main-nav.open .menu-links {
     display: flex;
   }
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 

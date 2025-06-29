@@ -94,7 +94,7 @@ const posts = (await getCollection('blog'))
     .tiles-recientes h2 {
       font-size: 1.8rem;
       margin-bottom: 1.5rem;
-      color: #274346;
+      color: var(--heading-color);
     }
 
     .tile-grid {
@@ -104,11 +104,11 @@ const posts = (await getCollection('blog'))
     }
 
     .tile {
-      background: white;
+      background: var(--bg-element);
       border-radius: 10px;
       overflow: hidden;
       text-decoration: none;
-      color: #274346;
+      color: var(--text-color);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       display: flex;
       flex-direction: column;
