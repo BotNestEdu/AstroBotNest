@@ -38,7 +38,6 @@ const posts = (await getCollection('blog')).filter((post) =>
       title={`Artículos sobre ${titleCase} | BotNest`} 
       description={`Explora todos los artículos etiquetados con "${readableTag}"`} 
     />
-    <link rel="canonical" href={`https://botnest.es/tags/${tag}/`} />
     <style>
       main {
         max-width: 960px;
